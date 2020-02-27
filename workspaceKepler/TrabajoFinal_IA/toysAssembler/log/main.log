@@ -1,0 +1,586 @@
+2020-02-16 16:33:24.115 Main-Container>> INFO: >>>>>>>>>>>>>>>> current-directory   = C:\eclipse-jee-kepler-SR1-win32-x86_64\eclipse\workspaceKepler\toysAssembler [com.tilab.wade.Boot main()]
+2020-02-16 16:33:24.117 Main-Container>> INFO: >>>>>>>>>>>>>>>> project-home        = C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler [com.tilab.wade.Boot main()]
+2020-02-16 16:33:25.431 Main-Container>> INFO: Loading types from file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/plugins/com.tilab.wolf_3.9.0/cfg/types.xml [com.tilab.wade.commons.TypeManager loadPlatformTypes()]
+2020-02-16 16:33:26.407 Main-Container>> INFO: ----------------------------------
+    This is JADE 4.5.0 - revision 6825 of 23-05-2017 10:06:04
+    downloaded in Open Source, under LGPL restrictions,
+    at http://jade.tilab.com/
+---------------------------------------- [jade.core.Runtime beginContainer()]
+2020-02-16 16:33:27.985 Main-Container>> INFO: Listening for intra-platform commands on address:
+- jicp://192.168.1.7:8172
+ [jade.imtp.leap.LEAPIMTPManager initialize()]
+2020-02-16 16:33:28.762 Main-Container>> INFO: Service jade.core.management.AgentManagement initialized [jade.core.BaseService init()]
+2020-02-16 16:33:28.805 Main-Container>> INFO: Service jade.core.messaging.Messaging initialized [jade.core.BaseService init()]
+2020-02-16 16:33:28.833 Main-Container>> INFO: Service jade.core.resource.ResourceManagement initialized [jade.core.BaseService init()]
+2020-02-16 16:33:28.842 Main-Container>> INFO: Service jade.core.messaging.TopicManagement initialized [jade.core.BaseService init()]
+2020-02-16 16:33:28.858 Main-Container>> INFO: Service jade.core.event.Notification initialized [jade.core.BaseService init()]
+2020-02-16 16:33:29.048 Main-Container>> INFO: HTTP-MTP Using XML parser com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser [jade.mtp.http.HTTPServer <init>()]
+2020-02-16 16:33:29.070 Main-Container>> INFO: MTP addresses:
+http://DESKTOP-4MO2C6R:7778/acc [jade.core.messaging.MessagingService boot()]
+2020-02-16 16:33:29.468 Main-Container>> INFO: Agent perf@192.168.1.7:8172/JADE - Starting........... [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 16:33:29.482 Main-Container>> INFO: Agent wsma@192.168.1.7:8172/JADE - Starting........... [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 16:33:29.482 Main-Container>> INFO: Agent esa@192.168.1.7:8172/JADE - Starting........... [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 16:33:29.487 Main-Container>> INFO: Agent cfa@192.168.1.7:8172/JADE - Starting........... [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 16:33:29.488 Main-Container>> INFO: Agent ca@192.168.1.7:8172/JADE - Starting........... [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 16:33:29.516 Main-Container>> INFO: Container-Monitor agent activated [jade.core.AgentContainerImpl startBootstrapAgents()]
+2020-02-16 16:33:29.516 Main-Container>> INFO: --------------------------------------
+Agent container Main-Container@192.168.1.7 is ready.
+-------------------------------------------- [jade.core.AgentContainerImpl joinPlatform()]
+2020-02-16 16:33:29.575 Main-Container>> INFO: Agent perf@192.168.1.7:8172/JADE - Ready ... [com.tilab.wade.performer.WorkflowEngineAgent agentSpecificSetup()]
+2020-02-16 16:33:29.589 Main-Container>> INFO: Agent cfa@192.168.1.7:8172/JADE: ConfigurationLoader class is com.tilab.wade.cfa.beans.ConfigurationLoaderImpl [com.tilab.wade.cfa.ConfigurationAgent agentSpecificSetup()]
+2020-02-16 16:33:29.598 Main-Container>> INFO: Agent wsma@192.168.1.7:8172/JADE - Using Storage com.tilab.wade.wsma.MemoryStorage [com.tilab.wade.wsma.WorkflowStatusManagerAgent agentSpecificSetup()]
+2020-02-16 16:33:29.599 Main-Container>> INFO: Agent wsma@192.168.1.7:8172/JADE - Executions cleanup mechanism disabled [com.tilab.wade.wsma.WorkflowStatusManagerAgent agentSpecificSetup()]
+2020-02-16 16:33:29.640 Main-Container>> INFO: Agent perf@192.168.1.7:8172/JADE - STARTUP COMPLETED SUCCESSFULLY! [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 16:33:29.661 Main-Container>> INFO: Agent wsma@192.168.1.7:8172/JADE - STARTUP COMPLETED SUCCESSFULLY! [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 16:33:29.667 Main-Container>> INFO: Agent cfa@192.168.1.7:8172/JADE: Control-Agent class is com.tilab.wade.ca.ControllerAgent [com.tilab.wade.cfa.ConfigurationAgent agentSpecificSetup()]
+2020-02-16 16:33:29.668 Main-Container>> INFO: Agent cfa@192.168.1.7:8172/JADE: Backup-Main-Control-Agent class is com.tilab.wade.bca.BackupControllerAgent [com.tilab.wade.cfa.ConfigurationAgent agentSpecificSetup()]
+2020-02-16 16:33:29.677 Main-Container>> INFO: Agent esa@192.168.1.7:8172/JADE - STARTUP COMPLETED SUCCESSFULLY! [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 16:33:29.714 Main-Container>> INFO: Agent cfa@192.168.1.7:8172/JADE - STARTUP COMPLETED SUCCESSFULLY! [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 16:33:29.779 Main-Container>> INFO: CA ca@192.168.1.7:8172/JADE - ClassLoader root directory C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/plugins/com.tilab.wolf_3.9.0//deploy does not exist. Creating... [com.tilab.wade.ca.ControllerAgent agentSpecificSetup()]
+2020-02-16 16:33:29.803 Main-Container>> INFO: Loading classes from:
+ [com.tilab.wade.ca.WadeClassLoader getUrlList()]
+2020-02-16 16:33:29.828 Main-Container>> INFO: Agent ca@192.168.1.7:8172/JADE - STARTUP COMPLETED SUCCESSFULLY! [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 16:33:30.322 Main-Container>> INFO: CA ca@192.168.1.7:8172/JADE: updating existing container info [com.tilab.wade.ca.ControllerAgent handleAddedContainer()]
+2020-02-16 16:33:32.308 Main-Container>> INFO: Adding node <GW-QuickLaunch> to the platform [jade.core.PlatformManagerImpl localAddNode()]
+2020-02-16 16:33:32.404 Main-Container>> INFO: --- Node <GW-QuickLaunch> ALIVE --- [jade.core.PlatformManagerImpl$1 nodeAdded()]
+2020-02-16 16:33:33.821 Main-Container>> INFO: Agent perf@192.168.1.7:8172/JADE - Executor DESKTOP-4MO2C6R:5398e0e8:1704febb7e0:-8000:1: STARTED. [com.tilab.wade.performer.WorkflowEngineAgent$WorkflowExecutor onStart()]
+2020-02-16 16:33:33.861 Main-Container>> WARNING: Agent perf@192.168.1.7:8172/JADE - Executor DESKTOP-4MO2C6R:5398e0e8:1704febb7e0:-8000:1: com.tilab.wade.performer.event.ExecutionErrorEvent in workflow toysassembler.workflows.AssemblingToysWorkflow, activity IdentifyToyComponents. Exception is com.tilab.wade.performer.WorkflowException: Uncaught exception in activity  IdentifyToyComponents [nested java.lang.NullPointerException: null] [com.tilab.wade.performer.WorkflowEngineAgent handleEvent()]
+2020-02-16 16:33:33.876 Main-Container>> INFO: Agent perf@192.168.1.7:8172/JADE - Executor DESKTOP-4MO2C6R:5398e0e8:1704febb7e0:-8000:1: FAILED. [com.tilab.wade.performer.WorkflowEngineAgent$WorkflowExecutor$2 handle()]
+2020-02-16 16:33:33.899 Main-Container>> INFO: Agent perf@192.168.1.7:8172/JADE - Executor DESKTOP-4MO2C6R:5398e0e8:1704febb7e0:-8000:1: TERMINATED. [com.tilab.wade.performer.WorkflowEngineAgent$WorkflowExecutor terminate()]
+2020-02-16 16:33:33.992 Main-Container>> INFO: AMS - Activating platform shutdown. Requester = ControlGW-QuickLaunch@192.168.1.7:8172/JADE [jade.domain.ams shutdownPlatformAction()]
+2020-02-16 16:33:33.997 Main-Container>> INFO: TopicManagentService: platform shutdown process initiation detected [jade.core.messaging.TopicManagementService$CommandOutgoingFilter accept()]
+2020-02-16 16:33:35.401 Main-Container>> INFO: PING from node GW-QuickLaunch returned [EXIT] [jade.core.nodeMonitoring.BlockingNodeFailureMonitor run()]
+2020-02-16 16:33:35.406 Main-Container>> INFO: --- Node <GW-QuickLaunch> TERMINATED --- [jade.core.PlatformManagerImpl removeTerminatedNode()]
+2020-02-16 16:33:35.407 Main-Container>> INFO: Removing node <GW-QuickLaunch> from the platform [jade.core.PlatformManagerImpl localRemoveNode()]
+2020-02-16 16:33:35.469 Main-Container>> INFO: Agent perf@192.168.1.7:8172/JADE - Terminated [com.tilab.wade.performer.WorkflowEngineAgent takeDown()]
+2020-02-16 16:33:35.485 Main-Container>> INFO: MessageManager shutting down ... [jade.core.messaging.MessageManager shutdown()]
+2020-02-16 16:33:35.497 Main-Container>> INFO: JADE is closing down now. [jade.core.Runtime$1 run()]
+2020-02-16 16:34:55.339 Main-Container>> INFO: >>>>>>>>>>>>>>>> current-directory   = C:\eclipse-jee-kepler-SR1-win32-x86_64\eclipse\workspaceKepler\toysAssembler [com.tilab.wade.Boot main()]
+2020-02-16 16:34:55.342 Main-Container>> INFO: >>>>>>>>>>>>>>>> project-home        = C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler [com.tilab.wade.Boot main()]
+2020-02-16 16:34:55.383 Main-Container>> WARNING: Could not retrieve types file, use default values [com.tilab.wade.commons.TypeManager <init>()]
+2020-02-16 16:38:21.920 Main-Container>> INFO: >>>>>>>>>>>>>>>> current-directory   = C:\eclipse-jee-kepler-SR1-win32-x86_64\eclipse\workspaceKepler\toysAssembler [com.tilab.wade.Boot main()]
+2020-02-16 16:38:21.923 Main-Container>> INFO: >>>>>>>>>>>>>>>> project-home        = C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler [com.tilab.wade.Boot main()]
+2020-02-16 16:38:22.122 Main-Container>> INFO: Loading types from file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler/cfg/types.xml [com.tilab.wade.commons.TypeManager loadPlatformTypes()]
+2020-02-16 16:38:22.216 Main-Container>> INFO: Loading types from file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/WADE-3.6.0/wadeSuite/wade/cfg/types.xml [com.tilab.wade.commons.TypeManager loadPlatformTypes()]
+2020-02-16 16:38:22.798 Main-Container>> INFO: ----------------------------------
+    This is JADE 4.5.0 - revision 6825 of 23-05-2017 10:06:04
+    downloaded in Open Source, under LGPL restrictions,
+    at http://jade.tilab.com/
+---------------------------------------- [jade.core.Runtime beginContainer()]
+2020-02-16 16:38:23.781 Main-Container>> INFO: Listening for intra-platform commands on address:
+- jicp://192.168.1.7:8172
+ [jade.imtp.leap.LEAPIMTPManager initialize()]
+2020-02-16 16:38:24.095 Main-Container>> INFO: Service jade.core.management.AgentManagement initialized [jade.core.BaseService init()]
+2020-02-16 16:38:24.122 Main-Container>> INFO: Service jade.core.messaging.Messaging initialized [jade.core.BaseService init()]
+2020-02-16 16:38:24.149 Main-Container>> INFO: Service jade.core.resource.ResourceManagement initialized [jade.core.BaseService init()]
+2020-02-16 16:38:24.159 Main-Container>> INFO: Service jade.core.messaging.TopicManagement initialized [jade.core.BaseService init()]
+2020-02-16 16:38:24.188 Main-Container>> INFO: Service jade.core.event.Notification initialized [jade.core.BaseService init()]
+2020-02-16 16:38:24.262 Main-Container>> INFO: HTTP-MTP Using XML parser com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser [jade.mtp.http.HTTPServer <init>()]
+2020-02-16 16:38:24.270 Main-Container>> INFO: MTP addresses:
+http://DESKTOP-4MO2C6R:7778/acc [jade.core.messaging.MessagingService boot()]
+2020-02-16 16:38:24.475 Main-Container>> INFO: Agent perf@192.168.1.7:8172/JADE - Starting........... [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 16:38:24.478 Main-Container>> INFO: Agent esa@192.168.1.7:8172/JADE - Starting........... [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 16:38:24.487 Main-Container>> INFO: Agent wsma@192.168.1.7:8172/JADE - Starting........... [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 16:38:24.508 Main-Container>> INFO: Agent cfa@192.168.1.7:8172/JADE - Starting........... [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 16:38:24.511 Main-Container>> INFO: Agent ca@192.168.1.7:8172/JADE - Starting........... [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 16:38:24.526 Main-Container>> INFO: Container-Monitor agent activated [jade.core.AgentContainerImpl startBootstrapAgents()]
+2020-02-16 16:38:24.527 Main-Container>> INFO: --------------------------------------
+Agent container Main-Container@192.168.1.7 is ready.
+-------------------------------------------- [jade.core.AgentContainerImpl joinPlatform()]
+2020-02-16 16:38:24.575 Main-Container>> INFO: Agent cfa@192.168.1.7:8172/JADE: ConfigurationLoader class is com.tilab.wade.cfa.beans.ConfigurationLoaderImpl [com.tilab.wade.cfa.ConfigurationAgent agentSpecificSetup()]
+2020-02-16 16:38:24.575 Main-Container>> INFO: Agent wsma@192.168.1.7:8172/JADE - Using Storage com.tilab.wade.wsma.MemoryStorage [com.tilab.wade.wsma.WorkflowStatusManagerAgent agentSpecificSetup()]
+2020-02-16 16:38:24.581 Main-Container>> INFO: Agent wsma@192.168.1.7:8172/JADE - Executions cleanup mechanism disabled [com.tilab.wade.wsma.WorkflowStatusManagerAgent agentSpecificSetup()]
+2020-02-16 16:38:24.564 Main-Container>> INFO: Agent perf@192.168.1.7:8172/JADE - Ready ... [com.tilab.wade.performer.WorkflowEngineAgent agentSpecificSetup()]
+2020-02-16 16:38:24.622 Main-Container>> INFO: Agent cfa@192.168.1.7:8172/JADE: Control-Agent class is com.tilab.wade.ca.ControllerAgent [com.tilab.wade.cfa.ConfigurationAgent agentSpecificSetup()]
+2020-02-16 16:38:24.622 Main-Container>> INFO: Agent cfa@192.168.1.7:8172/JADE: Backup-Main-Control-Agent class is com.tilab.wade.bca.BackupControllerAgent [com.tilab.wade.cfa.ConfigurationAgent agentSpecificSetup()]
+2020-02-16 16:38:24.649 Main-Container>> INFO: Agent perf@192.168.1.7:8172/JADE - STARTUP COMPLETED SUCCESSFULLY! [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 16:38:24.659 Main-Container>> INFO: Agent wsma@192.168.1.7:8172/JADE - STARTUP COMPLETED SUCCESSFULLY! [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 16:38:24.681 Main-Container>> INFO: Agent esa@192.168.1.7:8172/JADE - STARTUP COMPLETED SUCCESSFULLY! [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 16:38:24.690 Main-Container>> INFO: Agent cfa@192.168.1.7:8172/JADE - STARTUP COMPLETED SUCCESSFULLY! [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 16:38:24.910 Main-Container>> INFO: Loading classes from:
+file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler/deploy/wcl/1581888799619/Storekeeper_C.jar
+file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler/deploy/wcl/1581888799619/workflows.jar
+ [com.tilab.wade.ca.WadeClassLoader getUrlList()]
+2020-02-16 16:38:24.976 Main-Container>> INFO: Agent ca@192.168.1.7:8172/JADE - STARTUP COMPLETED SUCCESSFULLY! [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 16:38:25.377 Main-Container>> INFO: CA ca@192.168.1.7:8172/JADE: updating existing container info [com.tilab.wade.ca.ControllerAgent handleAddedContainer()]
+2020-02-16 16:38:26.345 Main-Container>> INFO: Adding node <GW-QuickLaunch> to the platform [jade.core.PlatformManagerImpl localAddNode()]
+2020-02-16 16:38:26.372 Main-Container>> INFO: --- Node <GW-QuickLaunch> ALIVE --- [jade.core.PlatformManagerImpl$1 nodeAdded()]
+2020-02-16 16:38:27.180 Main-Container>> INFO: Agent perf@192.168.1.7:8172/JADE - Executor DESKTOP-4MO2C6R:530c19ad:1704ff032da:-8000:1: STARTED. [com.tilab.wade.performer.WorkflowEngineAgent$WorkflowExecutor onStart()]
+2020-02-16 16:38:27.208 Main-Container>> WARNING: Agent perf@192.168.1.7:8172/JADE - Executor DESKTOP-4MO2C6R:530c19ad:1704ff032da:-8000:1: com.tilab.wade.performer.event.ExecutionErrorEvent in workflow toysassembler.workflows.AssemblingToysWorkflow, activity IdentifyToyComponents. Exception is com.tilab.wade.performer.WorkflowException: Uncaught exception in activity  IdentifyToyComponents [nested java.lang.NullPointerException: null] [com.tilab.wade.performer.WorkflowEngineAgent handleEvent()]
+2020-02-16 16:38:27.225 Main-Container>> INFO: Agent perf@192.168.1.7:8172/JADE - Executor DESKTOP-4MO2C6R:530c19ad:1704ff032da:-8000:1: FAILED. [com.tilab.wade.performer.WorkflowEngineAgent$WorkflowExecutor$2 handle()]
+2020-02-16 16:38:27.245 Main-Container>> INFO: Agent perf@192.168.1.7:8172/JADE - Executor DESKTOP-4MO2C6R:530c19ad:1704ff032da:-8000:1: TERMINATED. [com.tilab.wade.performer.WorkflowEngineAgent$WorkflowExecutor terminate()]
+2020-02-16 16:38:27.251 Main-Container>> INFO: AMS - Activating platform shutdown. Requester = ControlGW-QuickLaunch@192.168.1.7:8172/JADE [jade.domain.ams shutdownPlatformAction()]
+2020-02-16 16:38:27.256 Main-Container>> INFO: TopicManagentService: platform shutdown process initiation detected [jade.core.messaging.TopicManagementService$CommandOutgoingFilter accept()]
+2020-02-16 16:38:29.375 Main-Container>> INFO: PING from node GW-QuickLaunch returned [EXIT] [jade.core.nodeMonitoring.BlockingNodeFailureMonitor run()]
+2020-02-16 16:38:29.377 Main-Container>> INFO: --- Node <GW-QuickLaunch> TERMINATED --- [jade.core.PlatformManagerImpl removeTerminatedNode()]
+2020-02-16 16:38:29.379 Main-Container>> INFO: Removing node <GW-QuickLaunch> from the platform [jade.core.PlatformManagerImpl localRemoveNode()]
+2020-02-16 16:38:29.387 Main-Container>> INFO: Agent perf@192.168.1.7:8172/JADE - Terminated [com.tilab.wade.performer.WorkflowEngineAgent takeDown()]
+2020-02-16 16:38:29.422 Main-Container>> INFO: MessageManager shutting down ... [jade.core.messaging.MessageManager shutdown()]
+2020-02-16 16:38:29.427 Main-Container>> INFO: JADE is closing down now. [jade.core.Runtime$1 run()]
+2020-02-16 16:40:55.796 Main-Container>> INFO: >>>>>>>>>>>>>>>> current-directory   = C:\eclipse-jee-kepler-SR1-win32-x86_64\eclipse\workspaceKepler\toysAssembler [com.tilab.wade.Boot main()]
+2020-02-16 16:40:55.799 Main-Container>> INFO: >>>>>>>>>>>>>>>> project-home        = C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler [com.tilab.wade.Boot main()]
+2020-02-16 16:40:55.995 Main-Container>> INFO: Loading types from file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler/cfg/types.xml [com.tilab.wade.commons.TypeManager loadPlatformTypes()]
+2020-02-16 16:40:56.085 Main-Container>> INFO: Loading types from file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/WADE-3.6.0/wadeSuite/wade/cfg/types.xml [com.tilab.wade.commons.TypeManager loadPlatformTypes()]
+2020-02-16 16:40:56.620 Main-Container>> INFO: ----------------------------------
+    This is JADE 4.5.0 - revision 6825 of 23-05-2017 10:06:04
+    downloaded in Open Source, under LGPL restrictions,
+    at http://jade.tilab.com/
+---------------------------------------- [jade.core.Runtime beginContainer()]
+2020-02-16 16:40:57.594 Main-Container>> INFO: Listening for intra-platform commands on address:
+- jicp://192.168.1.7:8172
+ [jade.imtp.leap.LEAPIMTPManager initialize()]
+2020-02-16 16:40:57.901 Main-Container>> INFO: Service jade.core.management.AgentManagement initialized [jade.core.BaseService init()]
+2020-02-16 16:40:57.929 Main-Container>> INFO: Service jade.core.messaging.Messaging initialized [jade.core.BaseService init()]
+2020-02-16 16:40:57.955 Main-Container>> INFO: Service jade.core.resource.ResourceManagement initialized [jade.core.BaseService init()]
+2020-02-16 16:40:57.963 Main-Container>> INFO: Service jade.core.messaging.TopicManagement initialized [jade.core.BaseService init()]
+2020-02-16 16:40:57.980 Main-Container>> INFO: Service jade.core.event.Notification initialized [jade.core.BaseService init()]
+2020-02-16 16:40:58.068 Main-Container>> INFO: HTTP-MTP Using XML parser com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser [jade.mtp.http.HTTPServer <init>()]
+2020-02-16 16:40:58.079 Main-Container>> INFO: MTP addresses:
+http://DESKTOP-4MO2C6R:7778/acc [jade.core.messaging.MessagingService boot()]
+2020-02-16 16:40:58.297 Main-Container>> INFO: Agent wsma@192.168.1.7:8172/JADE - Starting........... [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 16:40:58.300 Main-Container>> INFO: Container-Monitor agent activated [jade.core.AgentContainerImpl startBootstrapAgents()]
+2020-02-16 16:40:58.302 Main-Container>> INFO: --------------------------------------
+Agent container Main-Container@192.168.1.7 is ready.
+-------------------------------------------- [jade.core.AgentContainerImpl joinPlatform()]
+2020-02-16 16:40:58.290 Main-Container>> INFO: Agent perf@192.168.1.7:8172/JADE - Starting........... [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 16:40:58.323 Main-Container>> INFO: Agent ca@192.168.1.7:8172/JADE - Starting........... [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 16:40:58.321 Main-Container>> INFO: Agent cfa@192.168.1.7:8172/JADE - Starting........... [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 16:40:58.290 Main-Container>> INFO: Agent esa@192.168.1.7:8172/JADE - Starting........... [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 16:40:58.359 Main-Container>> INFO: Agent perf@192.168.1.7:8172/JADE - Ready ... [com.tilab.wade.performer.WorkflowEngineAgent agentSpecificSetup()]
+2020-02-16 16:40:58.365 Main-Container>> INFO: Agent cfa@192.168.1.7:8172/JADE: ConfigurationLoader class is com.tilab.wade.cfa.beans.ConfigurationLoaderImpl [com.tilab.wade.cfa.ConfigurationAgent agentSpecificSetup()]
+2020-02-16 16:40:58.380 Main-Container>> INFO: Agent wsma@192.168.1.7:8172/JADE - Using Storage com.tilab.wade.wsma.MemoryStorage [com.tilab.wade.wsma.WorkflowStatusManagerAgent agentSpecificSetup()]
+2020-02-16 16:40:58.381 Main-Container>> INFO: Agent wsma@192.168.1.7:8172/JADE - Executions cleanup mechanism disabled [com.tilab.wade.wsma.WorkflowStatusManagerAgent agentSpecificSetup()]
+2020-02-16 16:40:58.396 Main-Container>> INFO: Agent cfa@192.168.1.7:8172/JADE: Control-Agent class is com.tilab.wade.ca.ControllerAgent [com.tilab.wade.cfa.ConfigurationAgent agentSpecificSetup()]
+2020-02-16 16:40:58.396 Main-Container>> INFO: Agent cfa@192.168.1.7:8172/JADE: Backup-Main-Control-Agent class is com.tilab.wade.bca.BackupControllerAgent [com.tilab.wade.cfa.ConfigurationAgent agentSpecificSetup()]
+2020-02-16 16:40:58.420 Main-Container>> INFO: Agent esa@192.168.1.7:8172/JADE - STARTUP COMPLETED SUCCESSFULLY! [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 16:40:58.437 Main-Container>> INFO: Agent perf@192.168.1.7:8172/JADE - STARTUP COMPLETED SUCCESSFULLY! [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 16:40:58.450 Main-Container>> INFO: Agent wsma@192.168.1.7:8172/JADE - STARTUP COMPLETED SUCCESSFULLY! [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 16:40:58.463 Main-Container>> INFO: Agent cfa@192.168.1.7:8172/JADE - STARTUP COMPLETED SUCCESSFULLY! [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 16:40:58.478 Main-Container>> INFO: Loading classes from:
+file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler/deploy/wcl/1581888799619/Storekeeper_C.jar
+file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler/deploy/wcl/1581888799619/workflows.jar
+ [com.tilab.wade.ca.WadeClassLoader getUrlList()]
+2020-02-16 16:40:58.545 Main-Container>> INFO: Agent ca@192.168.1.7:8172/JADE - STARTUP COMPLETED SUCCESSFULLY! [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 16:40:59.196 Main-Container>> INFO: CA ca@192.168.1.7:8172/JADE: updating existing container info [com.tilab.wade.ca.ControllerAgent handleAddedContainer()]
+2020-02-16 16:41:00.191 Main-Container>> INFO: Adding node <GW-QuickLaunch> to the platform [jade.core.PlatformManagerImpl localAddNode()]
+2020-02-16 16:41:00.220 Main-Container>> INFO: --- Node <GW-QuickLaunch> ALIVE --- [jade.core.PlatformManagerImpl$1 nodeAdded()]
+2020-02-16 16:41:00.916 Main-Container>> INFO: Agent perf@192.168.1.7:8172/JADE - Executor DESKTOP-4MO2C6R:-51650000:1704ff28b5c:-8000:1: STARTED. [com.tilab.wade.performer.WorkflowEngineAgent$WorkflowExecutor onStart()]
+2020-02-16 16:41:00.947 Main-Container>> WARNING: Agent perf@192.168.1.7:8172/JADE - Executor DESKTOP-4MO2C6R:-51650000:1704ff28b5c:-8000:1: com.tilab.wade.performer.event.ExecutionErrorEvent in workflow toysassembler.workflows.AssemblingToysWorkflow, activity IdentifyToyComponents. Exception is com.tilab.wade.performer.WorkflowException: Uncaught exception in activity  IdentifyToyComponents [nested java.lang.NullPointerException: null] [com.tilab.wade.performer.WorkflowEngineAgent handleEvent()]
+2020-02-16 16:41:00.959 Main-Container>> INFO: Agent perf@192.168.1.7:8172/JADE - Executor DESKTOP-4MO2C6R:-51650000:1704ff28b5c:-8000:1: FAILED. [com.tilab.wade.performer.WorkflowEngineAgent$WorkflowExecutor$2 handle()]
+2020-02-16 16:41:00.975 Main-Container>> INFO: Agent perf@192.168.1.7:8172/JADE - Executor DESKTOP-4MO2C6R:-51650000:1704ff28b5c:-8000:1: TERMINATED. [com.tilab.wade.performer.WorkflowEngineAgent$WorkflowExecutor terminate()]
+2020-02-16 16:41:00.986 Main-Container>> INFO: AMS - Activating platform shutdown. Requester = ControlGW-QuickLaunch@192.168.1.7:8172/JADE [jade.domain.ams shutdownPlatformAction()]
+2020-02-16 16:41:00.990 Main-Container>> INFO: TopicManagentService: platform shutdown process initiation detected [jade.core.messaging.TopicManagementService$CommandOutgoingFilter accept()]
+2020-02-16 16:41:03.227 Main-Container>> INFO: PING from node GW-QuickLaunch returned [EXIT] [jade.core.nodeMonitoring.BlockingNodeFailureMonitor run()]
+2020-02-16 16:41:03.230 Main-Container>> INFO: --- Node <GW-QuickLaunch> TERMINATED --- [jade.core.PlatformManagerImpl removeTerminatedNode()]
+2020-02-16 16:41:03.232 Main-Container>> INFO: Removing node <GW-QuickLaunch> from the platform [jade.core.PlatformManagerImpl localRemoveNode()]
+2020-02-16 16:41:03.236 Main-Container>> INFO: Agent perf@192.168.1.7:8172/JADE - Terminated [com.tilab.wade.performer.WorkflowEngineAgent takeDown()]
+2020-02-16 16:41:03.263 Main-Container>> INFO: MessageManager shutting down ... [jade.core.messaging.MessageManager shutdown()]
+2020-02-16 16:41:03.271 Main-Container>> INFO: JADE is closing down now. [jade.core.Runtime$1 run()]
+2020-02-16 16:54:46.564 Main-Container>> INFO: >>>>>>>>>>>>>>>> current-directory   = C:\eclipse-jee-kepler-SR1-win32-x86_64\eclipse\workspaceKepler\toysAssembler [com.tilab.wade.Boot main()]
+2020-02-16 16:54:46.566 Main-Container>> INFO: >>>>>>>>>>>>>>>> project-home        = C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler [com.tilab.wade.Boot main()]
+2020-02-16 16:54:46.735 Main-Container>> INFO: Loading types from file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler/cfg/types.xml [com.tilab.wade.commons.TypeManager loadPlatformTypes()]
+2020-02-16 16:54:46.808 Main-Container>> INFO: Loading types from file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/WADE-3.6.0/wadeSuite/wade/cfg/types.xml [com.tilab.wade.commons.TypeManager loadPlatformTypes()]
+2020-02-16 16:54:47.285 Main-Container>> INFO: ----------------------------------
+    This is JADE 4.5.0 - revision 6825 of 23-05-2017 10:06:04
+    downloaded in Open Source, under LGPL restrictions,
+    at http://jade.tilab.com/
+---------------------------------------- [jade.core.Runtime beginContainer()]
+2020-02-16 16:54:48.182 Main-Container>> INFO: Listening for intra-platform commands on address:
+- jicp://192.168.1.7:8172
+ [jade.imtp.leap.LEAPIMTPManager initialize()]
+2020-02-16 16:54:48.468 Main-Container>> INFO: Service jade.core.management.AgentManagement initialized [jade.core.BaseService init()]
+2020-02-16 16:54:48.501 Main-Container>> INFO: Service jade.core.messaging.Messaging initialized [jade.core.BaseService init()]
+2020-02-16 16:54:48.516 Main-Container>> INFO: Service jade.core.resource.ResourceManagement initialized [jade.core.BaseService init()]
+2020-02-16 16:54:48.523 Main-Container>> INFO: Service jade.core.messaging.TopicManagement initialized [jade.core.BaseService init()]
+2020-02-16 16:54:48.531 Main-Container>> INFO: Service jade.core.event.Notification initialized [jade.core.BaseService init()]
+2020-02-16 16:54:48.593 Main-Container>> INFO: HTTP-MTP Using XML parser com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser [jade.mtp.http.HTTPServer <init>()]
+2020-02-16 16:54:48.598 Main-Container>> INFO: MTP addresses:
+http://DESKTOP-4MO2C6R:7778/acc [jade.core.messaging.MessagingService boot()]
+2020-02-16 16:54:48.766 Main-Container>> INFO: Agent perf@192.168.1.7:8172/JADE - Starting........... [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 16:54:48.768 Main-Container>> INFO: Agent esa@192.168.1.7:8172/JADE - Starting........... [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 16:54:48.769 Main-Container>> INFO: Agent wsma@192.168.1.7:8172/JADE - Starting........... [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 16:54:48.778 Main-Container>> INFO: Agent cfa@192.168.1.7:8172/JADE - Starting........... [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 16:54:48.779 Main-Container>> INFO: Agent ca@192.168.1.7:8172/JADE - Starting........... [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 16:54:48.789 Main-Container>> INFO: Container-Monitor agent activated [jade.core.AgentContainerImpl startBootstrapAgents()]
+2020-02-16 16:54:48.790 Main-Container>> INFO: --------------------------------------
+Agent container Main-Container@192.168.1.7 is ready.
+-------------------------------------------- [jade.core.AgentContainerImpl joinPlatform()]
+2020-02-16 16:54:48.808 Main-Container>> INFO: Agent perf@192.168.1.7:8172/JADE - Ready ... [com.tilab.wade.performer.WorkflowEngineAgent agentSpecificSetup()]
+2020-02-16 16:54:48.815 Main-Container>> INFO: Agent cfa@192.168.1.7:8172/JADE: ConfigurationLoader class is com.tilab.wade.cfa.beans.ConfigurationLoaderImpl [com.tilab.wade.cfa.ConfigurationAgent agentSpecificSetup()]
+2020-02-16 16:54:48.818 Main-Container>> INFO: Agent wsma@192.168.1.7:8172/JADE - Using Storage com.tilab.wade.wsma.MemoryStorage [com.tilab.wade.wsma.WorkflowStatusManagerAgent agentSpecificSetup()]
+2020-02-16 16:54:48.836 Main-Container>> INFO: Agent wsma@192.168.1.7:8172/JADE - Executions cleanup mechanism disabled [com.tilab.wade.wsma.WorkflowStatusManagerAgent agentSpecificSetup()]
+2020-02-16 16:54:48.844 Main-Container>> INFO: Agent cfa@192.168.1.7:8172/JADE: Control-Agent class is com.tilab.wade.ca.ControllerAgent [com.tilab.wade.cfa.ConfigurationAgent agentSpecificSetup()]
+2020-02-16 16:54:48.845 Main-Container>> INFO: Agent cfa@192.168.1.7:8172/JADE: Backup-Main-Control-Agent class is com.tilab.wade.bca.BackupControllerAgent [com.tilab.wade.cfa.ConfigurationAgent agentSpecificSetup()]
+2020-02-16 16:54:48.855 Main-Container>> INFO: Agent perf@192.168.1.7:8172/JADE - STARTUP COMPLETED SUCCESSFULLY! [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 16:54:48.859 Main-Container>> INFO: Agent esa@192.168.1.7:8172/JADE - STARTUP COMPLETED SUCCESSFULLY! [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 16:54:48.869 Main-Container>> INFO: Agent wsma@192.168.1.7:8172/JADE - STARTUP COMPLETED SUCCESSFULLY! [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 16:54:48.880 Main-Container>> INFO: Agent cfa@192.168.1.7:8172/JADE - STARTUP COMPLETED SUCCESSFULLY! [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 16:54:48.894 Main-Container>> INFO: Loading classes from:
+file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler/deploy/wcl/1581888799619/Storekeeper_C.jar
+file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler/deploy/wcl/1581888799619/workflows.jar
+ [com.tilab.wade.ca.WadeClassLoader getUrlList()]
+2020-02-16 16:54:48.960 Main-Container>> INFO: Agent ca@192.168.1.7:8172/JADE - STARTUP COMPLETED SUCCESSFULLY! [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 16:54:49.686 Main-Container>> INFO: CA ca@192.168.1.7:8172/JADE: updating existing container info [com.tilab.wade.ca.ControllerAgent handleAddedContainer()]
+2020-02-16 16:54:58.969 Main-Container>> INFO: CA ca@192.168.1.7:8172/JADE: New CA leader is ca@192.168.1.7:8172/JADE [com.tilab.wade.ca.ControllerAgent$1 leaderElected()]
+2020-02-16 16:54:58.970 Main-Container>> INFO: CA ca@192.168.1.7:8172/JADE: Leadership acquired [com.tilab.wade.ca.ControllerAgent becomeLeader()]
+2020-02-16 16:55:55.862 Main-Container>> INFO: >>>>>>>>>>>>>>>> current-directory   = C:\eclipse-jee-kepler-SR1-win32-x86_64\eclipse\workspaceKepler\toysAssembler [com.tilab.wade.Boot main()]
+2020-02-16 16:55:55.864 Main-Container>> INFO: >>>>>>>>>>>>>>>> project-home        = C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler [com.tilab.wade.Boot main()]
+2020-02-16 16:55:56.019 Main-Container>> INFO: Loading types from file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler/cfg/types.xml [com.tilab.wade.commons.TypeManager loadPlatformTypes()]
+2020-02-16 16:55:56.100 Main-Container>> INFO: Loading types from file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/WADE-3.6.0/wadeSuite/wade/cfg/types.xml [com.tilab.wade.commons.TypeManager loadPlatformTypes()]
+2020-02-16 16:55:56.546 Main-Container>> INFO: ----------------------------------
+    This is JADE 4.5.0 - revision 6825 of 23-05-2017 10:06:04
+    downloaded in Open Source, under LGPL restrictions,
+    at http://jade.tilab.com/
+---------------------------------------- [jade.core.Runtime beginContainer()]
+2020-02-16 16:55:57.366 Main-Container>> WARNING: Error adding ICP jade.imtp.leap.JICP.JICPPeer@4ac68d3e[Cannot bind server socket to localhost port 8172]. [jade.imtp.leap.CommandDispatcher addICP()]
+2020-02-16 16:55:57.370 Main-Container>> SEVERE: Communication failure while joining agent platform: No ICP active [jade.core.AgentContainerImpl joinPlatform()]
+2020-02-16 16:55:57.373 Main-Container>> INFO: JADE is closing down now. [jade.core.Runtime$1 run()]
+2020-02-16 16:56:07.624 Main-Container>> INFO: >>>>>>>>>>>>>>>> current-directory   = C:\eclipse-jee-kepler-SR1-win32-x86_64\eclipse\workspaceKepler\toysAssembler [com.tilab.wade.Boot main()]
+2020-02-16 16:56:07.625 Main-Container>> INFO: >>>>>>>>>>>>>>>> project-home        = C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler [com.tilab.wade.Boot main()]
+2020-02-16 16:56:07.750 Main-Container>> INFO: Loading types from file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler/cfg/types.xml [com.tilab.wade.commons.TypeManager loadPlatformTypes()]
+2020-02-16 16:56:07.813 Main-Container>> INFO: Loading types from file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/WADE-3.6.0/wadeSuite/wade/cfg/types.xml [com.tilab.wade.commons.TypeManager loadPlatformTypes()]
+2020-02-16 16:56:08.250 Main-Container>> INFO: ----------------------------------
+    This is JADE 4.5.0 - revision 6825 of 23-05-2017 10:06:04
+    downloaded in Open Source, under LGPL restrictions,
+    at http://jade.tilab.com/
+---------------------------------------- [jade.core.Runtime beginContainer()]
+2020-02-16 16:56:09.230 Main-Container>> WARNING: Error adding ICP jade.imtp.leap.JICP.JICPPeer@4ac68d3e[Cannot bind server socket to localhost port 8172]. [jade.imtp.leap.CommandDispatcher addICP()]
+2020-02-16 16:56:09.233 Main-Container>> SEVERE: Communication failure while joining agent platform: No ICP active [jade.core.AgentContainerImpl joinPlatform()]
+2020-02-16 16:56:09.236 Main-Container>> INFO: JADE is closing down now. [jade.core.Runtime$1 run()]
+2020-02-16 16:56:50.472 Main-Container>> INFO: >>>>>>>>>>>>>>>> current-directory   = C:\eclipse-jee-kepler-SR1-win32-x86_64\eclipse\workspaceKepler\toysAssembler [com.tilab.wade.Boot main()]
+2020-02-16 16:56:50.474 Main-Container>> INFO: >>>>>>>>>>>>>>>> project-home        = C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler [com.tilab.wade.Boot main()]
+2020-02-16 16:56:50.610 Main-Container>> INFO: Loading types from file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler/cfg/types.xml [com.tilab.wade.commons.TypeManager loadPlatformTypes()]
+2020-02-16 16:56:50.671 Main-Container>> INFO: Loading types from file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/WADE-3.6.0/wadeSuite/wade/cfg/types.xml [com.tilab.wade.commons.TypeManager loadPlatformTypes()]
+2020-02-16 16:56:51.115 Main-Container>> INFO: ----------------------------------
+    This is JADE 4.5.0 - revision 6825 of 23-05-2017 10:06:04
+    downloaded in Open Source, under LGPL restrictions,
+    at http://jade.tilab.com/
+---------------------------------------- [jade.core.Runtime beginContainer()]
+2020-02-16 16:56:51.948 Main-Container>> WARNING: Error adding ICP jade.imtp.leap.JICP.JICPPeer@4ac68d3e[Cannot bind server socket to localhost port 8172]. [jade.imtp.leap.CommandDispatcher addICP()]
+2020-02-16 16:56:51.952 Main-Container>> SEVERE: Communication failure while joining agent platform: No ICP active [jade.core.AgentContainerImpl joinPlatform()]
+2020-02-16 16:56:51.957 Main-Container>> INFO: JADE is closing down now. [jade.core.Runtime$1 run()]
+2020-02-16 16:57:12.987 Main-Container>> INFO: >>>>>>>>>>>>>>>> current-directory   = C:\eclipse-jee-kepler-SR1-win32-x86_64\eclipse\workspaceKepler\toysAssembler [com.tilab.wade.Boot main()]
+2020-02-16 16:57:12.988 Main-Container>> INFO: >>>>>>>>>>>>>>>> project-home        = C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler [com.tilab.wade.Boot main()]
+2020-02-16 16:57:13.122 Main-Container>> INFO: Loading types from file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler/cfg/types.xml [com.tilab.wade.commons.TypeManager loadPlatformTypes()]
+2020-02-16 16:57:13.188 Main-Container>> INFO: Loading types from file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/WADE-3.6.0/wadeSuite/wade/cfg/types.xml [com.tilab.wade.commons.TypeManager loadPlatformTypes()]
+2020-02-16 16:57:13.631 Main-Container>> INFO: ----------------------------------
+    This is JADE 4.5.0 - revision 6825 of 23-05-2017 10:06:04
+    downloaded in Open Source, under LGPL restrictions,
+    at http://jade.tilab.com/
+---------------------------------------- [jade.core.Runtime beginContainer()]
+2020-02-16 16:57:14.464 Main-Container>> WARNING: Error adding ICP jade.imtp.leap.JICP.JICPPeer@4ac68d3e[Cannot bind server socket to localhost port 8172]. [jade.imtp.leap.CommandDispatcher addICP()]
+2020-02-16 16:57:14.468 Main-Container>> SEVERE: Communication failure while joining agent platform: No ICP active [jade.core.AgentContainerImpl joinPlatform()]
+2020-02-16 16:57:14.473 Main-Container>> INFO: JADE is closing down now. [jade.core.Runtime$1 run()]
+2020-02-16 16:58:00.217 Main-Container>> INFO: >>>>>>>>>>>>>>>> current-directory   = C:\eclipse-jee-kepler-SR1-win32-x86_64\eclipse\workspaceKepler\toysAssembler [com.tilab.wade.Boot main()]
+2020-02-16 16:58:00.218 Main-Container>> INFO: >>>>>>>>>>>>>>>> project-home        = C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler [com.tilab.wade.Boot main()]
+2020-02-16 16:58:00.354 Main-Container>> INFO: Loading types from file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler/cfg/types.xml [com.tilab.wade.commons.TypeManager loadPlatformTypes()]
+2020-02-16 16:58:00.416 Main-Container>> INFO: Loading types from file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/WADE-3.6.0/wadeSuite/wade/cfg/types.xml [com.tilab.wade.commons.TypeManager loadPlatformTypes()]
+2020-02-16 16:58:00.867 Main-Container>> INFO: ----------------------------------
+    This is JADE 4.5.0 - revision 6825 of 23-05-2017 10:06:04
+    downloaded in Open Source, under LGPL restrictions,
+    at http://jade.tilab.com/
+---------------------------------------- [jade.core.Runtime beginContainer()]
+2020-02-16 16:58:01.805 Main-Container>> WARNING: Error adding ICP jade.imtp.leap.JICP.JICPPeer@4ac68d3e[Cannot bind server socket to localhost port 8172]. [jade.imtp.leap.CommandDispatcher addICP()]
+2020-02-16 16:58:01.810 Main-Container>> SEVERE: Communication failure while joining agent platform: No ICP active [jade.core.AgentContainerImpl joinPlatform()]
+2020-02-16 16:58:01.815 Main-Container>> INFO: JADE is closing down now. [jade.core.Runtime$1 run()]
+2020-02-16 16:58:25.155 Main-Container>> INFO: >>>>>>>>>>>>>>>> current-directory   = C:\eclipse-jee-kepler-SR1-win32-x86_64\eclipse\workspaceKepler\toysAssembler [com.tilab.wade.Boot main()]
+2020-02-16 16:58:25.157 Main-Container>> INFO: >>>>>>>>>>>>>>>> project-home        = C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler [com.tilab.wade.Boot main()]
+2020-02-16 16:58:25.322 Main-Container>> INFO: Loading types from file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler/cfg/types.xml [com.tilab.wade.commons.TypeManager loadPlatformTypes()]
+2020-02-16 16:58:25.390 Main-Container>> INFO: Loading types from file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/WADE-3.6.0/wadeSuite/wade/cfg/types.xml [com.tilab.wade.commons.TypeManager loadPlatformTypes()]
+2020-02-16 16:58:25.828 Main-Container>> INFO: ----------------------------------
+    This is JADE 4.5.0 - revision 6825 of 23-05-2017 10:06:04
+    downloaded in Open Source, under LGPL restrictions,
+    at http://jade.tilab.com/
+---------------------------------------- [jade.core.Runtime beginContainer()]
+2020-02-16 16:58:26.675 Main-Container>> WARNING: Error adding ICP jade.imtp.leap.JICP.JICPPeer@4ac68d3e[Cannot bind server socket to localhost port 8172]. [jade.imtp.leap.CommandDispatcher addICP()]
+2020-02-16 16:58:26.679 Main-Container>> SEVERE: Communication failure while joining agent platform: No ICP active [jade.core.AgentContainerImpl joinPlatform()]
+2020-02-16 16:58:26.682 Main-Container>> INFO: JADE is closing down now. [jade.core.Runtime$1 run()]
+2020-02-16 16:58:53.555 Main-Container>> INFO: >>>>>>>>>>>>>>>> current-directory   = C:\eclipse-jee-kepler-SR1-win32-x86_64\eclipse\workspaceKepler\toysAssembler [com.tilab.wade.Boot main()]
+2020-02-16 16:58:53.556 Main-Container>> INFO: >>>>>>>>>>>>>>>> project-home        = C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler [com.tilab.wade.Boot main()]
+2020-02-16 16:58:53.678 Main-Container>> INFO: Loading types from file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler/cfg/types.xml [com.tilab.wade.commons.TypeManager loadPlatformTypes()]
+2020-02-16 16:58:53.741 Main-Container>> INFO: Loading types from file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/WADE-3.6.0/wadeSuite/wade/cfg/types.xml [com.tilab.wade.commons.TypeManager loadPlatformTypes()]
+2020-02-16 16:58:54.183 Main-Container>> INFO: ----------------------------------
+    This is JADE 4.5.0 - revision 6825 of 23-05-2017 10:06:04
+    downloaded in Open Source, under LGPL restrictions,
+    at http://jade.tilab.com/
+---------------------------------------- [jade.core.Runtime beginContainer()]
+2020-02-16 16:58:55.036 Main-Container>> WARNING: Error adding ICP jade.imtp.leap.JICP.JICPPeer@4ac68d3e[Cannot bind server socket to localhost port 8172]. [jade.imtp.leap.CommandDispatcher addICP()]
+2020-02-16 16:58:55.039 Main-Container>> SEVERE: Communication failure while joining agent platform: No ICP active [jade.core.AgentContainerImpl joinPlatform()]
+2020-02-16 16:58:55.045 Main-Container>> INFO: JADE is closing down now. [jade.core.Runtime$1 run()]
+2020-02-16 17:00:07.546 Main-Container>> INFO: >>>>>>>>>>>>>>>> current-directory   = C:\eclipse-jee-kepler-SR1-win32-x86_64\eclipse\workspaceKepler\toysAssembler [com.tilab.wade.Boot main()]
+2020-02-16 17:00:07.549 Main-Container>> INFO: >>>>>>>>>>>>>>>> project-home        = C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler [com.tilab.wade.Boot main()]
+2020-02-16 17:00:07.729 Main-Container>> INFO: Loading types from file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler/cfg/types.xml [com.tilab.wade.commons.TypeManager loadPlatformTypes()]
+2020-02-16 17:00:07.809 Main-Container>> INFO: Loading types from file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/WADE-3.6.0/wadeSuite/wade/cfg/types.xml [com.tilab.wade.commons.TypeManager loadPlatformTypes()]
+2020-02-16 17:00:08.423 Main-Container>> INFO: ----------------------------------
+    This is JADE 4.5.0 - revision 6825 of 23-05-2017 10:06:04
+    downloaded in Open Source, under LGPL restrictions,
+    at http://jade.tilab.com/
+---------------------------------------- [jade.core.Runtime beginContainer()]
+2020-02-16 17:00:09.423 Main-Container>> WARNING: Error adding ICP jade.imtp.leap.JICP.JICPPeer@24a35978[Cannot bind server socket to localhost port 8172]. [jade.imtp.leap.CommandDispatcher addICP()]
+2020-02-16 17:00:09.427 Main-Container>> SEVERE: Communication failure while joining agent platform: No ICP active [jade.core.AgentContainerImpl joinPlatform()]
+2020-02-16 17:00:09.440 Main-Container>> INFO: JADE is closing down now. [jade.core.Runtime$1 run()]
+2020-02-16 17:00:28.303 Main-Container>> INFO: >>>>>>>>>>>>>>>> current-directory   = C:\eclipse-jee-kepler-SR1-win32-x86_64\eclipse\workspaceKepler\toysAssembler [com.tilab.wade.Boot main()]
+2020-02-16 17:00:28.304 Main-Container>> INFO: >>>>>>>>>>>>>>>> project-home        = C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler [com.tilab.wade.Boot main()]
+2020-02-16 17:00:28.430 Main-Container>> INFO: Loading types from file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler/cfg/types.xml [com.tilab.wade.commons.TypeManager loadPlatformTypes()]
+2020-02-16 17:00:28.498 Main-Container>> INFO: Loading types from file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/WADE-3.6.0/wadeSuite/wade/cfg/types.xml [com.tilab.wade.commons.TypeManager loadPlatformTypes()]
+2020-02-16 17:00:28.942 Main-Container>> INFO: ----------------------------------
+    This is JADE 4.5.0 - revision 6825 of 23-05-2017 10:06:04
+    downloaded in Open Source, under LGPL restrictions,
+    at http://jade.tilab.com/
+---------------------------------------- [jade.core.Runtime beginContainer()]
+2020-02-16 17:00:29.798 Main-Container>> WARNING: Error adding ICP jade.imtp.leap.JICP.JICPPeer@4ac68d3e[Cannot bind server socket to localhost port 8172]. [jade.imtp.leap.CommandDispatcher addICP()]
+2020-02-16 17:00:29.801 Main-Container>> SEVERE: Communication failure while joining agent platform: No ICP active [jade.core.AgentContainerImpl joinPlatform()]
+2020-02-16 17:00:29.808 Main-Container>> INFO: JADE is closing down now. [jade.core.Runtime$1 run()]
+2020-02-16 17:01:18.963 Main-Container>> INFO: >>>>>>>>>>>>>>>> current-directory   = C:\eclipse-jee-kepler-SR1-win32-x86_64\eclipse\workspaceKepler\toysAssembler [com.tilab.wade.Boot main()]
+2020-02-16 17:01:18.965 Main-Container>> INFO: >>>>>>>>>>>>>>>> project-home        = C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler [com.tilab.wade.Boot main()]
+2020-02-16 17:01:19.162 Main-Container>> INFO: Loading types from file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler/cfg/types.xml [com.tilab.wade.commons.TypeManager loadPlatformTypes()]
+2020-02-16 17:01:19.266 Main-Container>> INFO: Loading types from file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/WADE-3.6.0/wadeSuite/wade/cfg/types.xml [com.tilab.wade.commons.TypeManager loadPlatformTypes()]
+2020-02-16 17:01:19.905 Main-Container>> INFO: ----------------------------------
+    This is JADE 4.5.0 - revision 6825 of 23-05-2017 10:06:04
+    downloaded in Open Source, under LGPL restrictions,
+    at http://jade.tilab.com/
+---------------------------------------- [jade.core.Runtime beginContainer()]
+2020-02-16 17:01:20.896 Main-Container>> INFO: Listening for intra-platform commands on address:
+- jicp://192.168.1.7:8172
+ [jade.imtp.leap.LEAPIMTPManager initialize()]
+2020-02-16 17:01:21.265 Main-Container>> INFO: Service jade.core.management.AgentManagement initialized [jade.core.BaseService init()]
+2020-02-16 17:01:21.292 Main-Container>> INFO: Service jade.core.messaging.Messaging initialized [jade.core.BaseService init()]
+2020-02-16 17:01:21.315 Main-Container>> INFO: Service jade.core.resource.ResourceManagement initialized [jade.core.BaseService init()]
+2020-02-16 17:01:21.326 Main-Container>> INFO: Service jade.core.messaging.TopicManagement initialized [jade.core.BaseService init()]
+2020-02-16 17:01:21.341 Main-Container>> INFO: Service jade.core.event.Notification initialized [jade.core.BaseService init()]
+2020-02-16 17:01:21.448 Main-Container>> INFO: HTTP-MTP Using XML parser com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser [jade.mtp.http.HTTPServer <init>()]
+2020-02-16 17:01:21.459 Main-Container>> INFO: MTP addresses:
+http://DESKTOP-4MO2C6R:7778/acc [jade.core.messaging.MessagingService boot()]
+2020-02-16 17:01:21.666 Main-Container>> INFO: Agent perf@192.168.1.7:8172/JADE - Starting........... [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 17:01:21.667 Main-Container>> INFO: Agent esa@192.168.1.7:8172/JADE - Starting........... [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 17:01:21.674 Main-Container>> INFO: Agent wsma@192.168.1.7:8172/JADE - Starting........... [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 17:01:21.686 Main-Container>> INFO: Agent ca@192.168.1.7:8172/JADE - Starting........... [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 17:01:21.688 Main-Container>> INFO: Agent cfa@192.168.1.7:8172/JADE - Starting........... [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 17:01:21.703 Main-Container>> INFO: Container-Monitor agent activated [jade.core.AgentContainerImpl startBootstrapAgents()]
+2020-02-16 17:01:21.704 Main-Container>> INFO: --------------------------------------
+Agent container Main-Container@192.168.1.7 is ready.
+-------------------------------------------- [jade.core.AgentContainerImpl joinPlatform()]
+2020-02-16 17:01:21.739 Main-Container>> INFO: Agent perf@192.168.1.7:8172/JADE - Ready ... [com.tilab.wade.performer.WorkflowEngineAgent agentSpecificSetup()]
+2020-02-16 17:01:21.750 Main-Container>> INFO: Agent cfa@192.168.1.7:8172/JADE: ConfigurationLoader class is com.tilab.wade.cfa.beans.ConfigurationLoaderImpl [com.tilab.wade.cfa.ConfigurationAgent agentSpecificSetup()]
+2020-02-16 17:01:21.759 Main-Container>> INFO: Agent wsma@192.168.1.7:8172/JADE - Using Storage com.tilab.wade.wsma.MemoryStorage [com.tilab.wade.wsma.WorkflowStatusManagerAgent agentSpecificSetup()]
+2020-02-16 17:01:21.768 Main-Container>> INFO: Agent wsma@192.168.1.7:8172/JADE - Executions cleanup mechanism disabled [com.tilab.wade.wsma.WorkflowStatusManagerAgent agentSpecificSetup()]
+2020-02-16 17:01:21.788 Main-Container>> INFO: Agent cfa@192.168.1.7:8172/JADE: Control-Agent class is com.tilab.wade.ca.ControllerAgent [com.tilab.wade.cfa.ConfigurationAgent agentSpecificSetup()]
+2020-02-16 17:01:21.789 Main-Container>> INFO: Agent cfa@192.168.1.7:8172/JADE: Backup-Main-Control-Agent class is com.tilab.wade.bca.BackupControllerAgent [com.tilab.wade.cfa.ConfigurationAgent agentSpecificSetup()]
+2020-02-16 17:01:21.822 Main-Container>> INFO: Agent esa@192.168.1.7:8172/JADE - STARTUP COMPLETED SUCCESSFULLY! [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 17:01:21.835 Main-Container>> INFO: Agent perf@192.168.1.7:8172/JADE - STARTUP COMPLETED SUCCESSFULLY! [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 17:01:21.846 Main-Container>> INFO: Agent wsma@192.168.1.7:8172/JADE - STARTUP COMPLETED SUCCESSFULLY! [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 17:01:21.861 Main-Container>> INFO: Agent cfa@192.168.1.7:8172/JADE - STARTUP COMPLETED SUCCESSFULLY! [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 17:01:21.881 Main-Container>> INFO: Loading classes from:
+file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler/deploy/wcl/1581888799619/Storekeeper_C.jar
+file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler/deploy/wcl/1581888799619/workflows.jar
+ [com.tilab.wade.ca.WadeClassLoader getUrlList()]
+2020-02-16 17:01:21.970 Main-Container>> INFO: Agent ca@192.168.1.7:8172/JADE - STARTUP COMPLETED SUCCESSFULLY! [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 17:01:22.594 Main-Container>> INFO: CA ca@192.168.1.7:8172/JADE: updating existing container info [com.tilab.wade.ca.ControllerAgent handleAddedContainer()]
+2020-02-16 17:01:23.697 Main-Container>> INFO: Adding node <GW-QuickLaunch> to the platform [jade.core.PlatformManagerImpl localAddNode()]
+2020-02-16 17:01:23.727 Main-Container>> INFO: --- Node <GW-QuickLaunch> ALIVE --- [jade.core.PlatformManagerImpl$1 nodeAdded()]
+2020-02-16 17:01:24.489 Main-Container>> INFO: Agent perf@192.168.1.7:8172/JADE - Executor DESKTOP-4MO2C6R:1ab9fa47:170500536c7:-8000:1: STARTED. [com.tilab.wade.performer.WorkflowEngineAgent$WorkflowExecutor onStart()]
+2020-02-16 17:01:24.522 Main-Container>> WARNING: Agent perf@192.168.1.7:8172/JADE - Executor DESKTOP-4MO2C6R:1ab9fa47:170500536c7:-8000:1: com.tilab.wade.performer.event.ExecutionErrorEvent in workflow toysassembler.workflows.AssemblingToysWorkflow, activity IdentifyToyComponents. Exception is com.tilab.wade.performer.WorkflowException: Uncaught exception in activity  IdentifyToyComponents [nested java.lang.NullPointerException: null] [com.tilab.wade.performer.WorkflowEngineAgent handleEvent()]
+2020-02-16 17:01:24.540 Main-Container>> INFO: Agent perf@192.168.1.7:8172/JADE - Executor DESKTOP-4MO2C6R:1ab9fa47:170500536c7:-8000:1: FAILED. [com.tilab.wade.performer.WorkflowEngineAgent$WorkflowExecutor$2 handle()]
+2020-02-16 17:01:24.552 Main-Container>> INFO: Agent perf@192.168.1.7:8172/JADE - Executor DESKTOP-4MO2C6R:1ab9fa47:170500536c7:-8000:1: TERMINATED. [com.tilab.wade.performer.WorkflowEngineAgent$WorkflowExecutor terminate()]
+2020-02-16 17:01:24.568 Main-Container>> INFO: AMS - Activating platform shutdown. Requester = ControlGW-QuickLaunch@192.168.1.7:8172/JADE [jade.domain.ams shutdownPlatformAction()]
+2020-02-16 17:01:24.572 Main-Container>> INFO: TopicManagentService: platform shutdown process initiation detected [jade.core.messaging.TopicManagementService$CommandOutgoingFilter accept()]
+2020-02-16 17:01:26.725 Main-Container>> INFO: PING from node GW-QuickLaunch returned [EXIT] [jade.core.nodeMonitoring.BlockingNodeFailureMonitor run()]
+2020-02-16 17:01:26.729 Main-Container>> INFO: --- Node <GW-QuickLaunch> TERMINATED --- [jade.core.PlatformManagerImpl removeTerminatedNode()]
+2020-02-16 17:01:26.730 Main-Container>> INFO: Removing node <GW-QuickLaunch> from the platform [jade.core.PlatformManagerImpl localRemoveNode()]
+2020-02-16 17:01:26.736 Main-Container>> INFO: Agent perf@192.168.1.7:8172/JADE - Terminated [com.tilab.wade.performer.WorkflowEngineAgent takeDown()]
+2020-02-16 17:01:26.750 Main-Container>> WARNING: Threaded behaviour PerformanceMonitorBehaviour interrupted before termination [jade.core.behaviours.ThreadedBehaviourFactory$ThreadedBehaviourWrapper run()]
+2020-02-16 17:01:26.754 Main-Container>> INFO: MessageManager shutting down ... [jade.core.messaging.MessageManager shutdown()]
+2020-02-16 17:01:26.763 Main-Container>> INFO: JADE is closing down now. [jade.core.Runtime$1 run()]
+2020-02-16 17:01:43.997 Main-Container>> INFO: >>>>>>>>>>>>>>>> current-directory   = C:\eclipse-jee-kepler-SR1-win32-x86_64\eclipse\workspaceKepler\toysAssembler [com.tilab.wade.Boot main()]
+2020-02-16 17:01:43.999 Main-Container>> INFO: >>>>>>>>>>>>>>>> project-home        = C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler [com.tilab.wade.Boot main()]
+2020-02-16 17:01:44.138 Main-Container>> INFO: Loading types from file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler/cfg/types.xml [com.tilab.wade.commons.TypeManager loadPlatformTypes()]
+2020-02-16 17:01:44.212 Main-Container>> INFO: Loading types from file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/WADE-3.6.0/wadeSuite/wade/cfg/types.xml [com.tilab.wade.commons.TypeManager loadPlatformTypes()]
+2020-02-16 17:01:44.648 Main-Container>> INFO: ----------------------------------
+    This is JADE 4.5.0 - revision 6825 of 23-05-2017 10:06:04
+    downloaded in Open Source, under LGPL restrictions,
+    at http://jade.tilab.com/
+---------------------------------------- [jade.core.Runtime beginContainer()]
+2020-02-16 17:01:45.605 Main-Container>> INFO: Listening for intra-platform commands on address:
+- jicp://192.168.1.7:8172
+ [jade.imtp.leap.LEAPIMTPManager initialize()]
+2020-02-16 17:01:45.863 Main-Container>> INFO: Service jade.core.management.AgentManagement initialized [jade.core.BaseService init()]
+2020-02-16 17:01:45.886 Main-Container>> INFO: Service jade.core.messaging.Messaging initialized [jade.core.BaseService init()]
+2020-02-16 17:01:45.903 Main-Container>> INFO: Service jade.core.resource.ResourceManagement initialized [jade.core.BaseService init()]
+2020-02-16 17:01:45.909 Main-Container>> INFO: Service jade.core.messaging.TopicManagement initialized [jade.core.BaseService init()]
+2020-02-16 17:01:45.917 Main-Container>> INFO: Service jade.core.event.Notification initialized [jade.core.BaseService init()]
+2020-02-16 17:01:45.981 Main-Container>> INFO: HTTP-MTP Using XML parser com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser [jade.mtp.http.HTTPServer <init>()]
+2020-02-16 17:01:45.986 Main-Container>> INFO: MTP addresses:
+http://DESKTOP-4MO2C6R:7778/acc [jade.core.messaging.MessagingService boot()]
+2020-02-16 17:01:46.180 Main-Container>> INFO: Agent perf@192.168.1.7:8172/JADE - Starting........... [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 17:01:46.182 Main-Container>> INFO: Agent esa@192.168.1.7:8172/JADE - Starting........... [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 17:01:46.184 Main-Container>> INFO: Agent wsma@192.168.1.7:8172/JADE - Starting........... [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 17:01:46.186 Main-Container>> INFO: Agent cfa@192.168.1.7:8172/JADE - Starting........... [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 17:01:46.202 Main-Container>> INFO: Agent ca@192.168.1.7:8172/JADE - Starting........... [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 17:01:46.205 Main-Container>> INFO: Container-Monitor agent activated [jade.core.AgentContainerImpl startBootstrapAgents()]
+2020-02-16 17:01:46.206 Main-Container>> INFO: --------------------------------------
+Agent container Main-Container@192.168.1.7 is ready.
+-------------------------------------------- [jade.core.AgentContainerImpl joinPlatform()]
+2020-02-16 17:01:46.226 Main-Container>> INFO: Agent perf@192.168.1.7:8172/JADE - Ready ... [com.tilab.wade.performer.WorkflowEngineAgent agentSpecificSetup()]
+2020-02-16 17:01:46.235 Main-Container>> INFO: Agent cfa@192.168.1.7:8172/JADE: ConfigurationLoader class is com.tilab.wade.cfa.beans.ConfigurationLoaderImpl [com.tilab.wade.cfa.ConfigurationAgent agentSpecificSetup()]
+2020-02-16 17:01:46.251 Main-Container>> INFO: Agent wsma@192.168.1.7:8172/JADE - Using Storage com.tilab.wade.wsma.MemoryStorage [com.tilab.wade.wsma.WorkflowStatusManagerAgent agentSpecificSetup()]
+2020-02-16 17:01:46.252 Main-Container>> INFO: Agent wsma@192.168.1.7:8172/JADE - Executions cleanup mechanism disabled [com.tilab.wade.wsma.WorkflowStatusManagerAgent agentSpecificSetup()]
+2020-02-16 17:01:46.263 Main-Container>> INFO: Agent cfa@192.168.1.7:8172/JADE: Control-Agent class is com.tilab.wade.ca.ControllerAgent [com.tilab.wade.cfa.ConfigurationAgent agentSpecificSetup()]
+2020-02-16 17:01:46.263 Main-Container>> INFO: Agent cfa@192.168.1.7:8172/JADE: Backup-Main-Control-Agent class is com.tilab.wade.bca.BackupControllerAgent [com.tilab.wade.cfa.ConfigurationAgent agentSpecificSetup()]
+2020-02-16 17:01:46.276 Main-Container>> INFO: Agent perf@192.168.1.7:8172/JADE - STARTUP COMPLETED SUCCESSFULLY! [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 17:01:46.281 Main-Container>> INFO: Agent esa@192.168.1.7:8172/JADE - STARTUP COMPLETED SUCCESSFULLY! [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 17:01:46.290 Main-Container>> INFO: Agent wsma@192.168.1.7:8172/JADE - STARTUP COMPLETED SUCCESSFULLY! [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 17:01:46.308 Main-Container>> INFO: Agent cfa@192.168.1.7:8172/JADE - STARTUP COMPLETED SUCCESSFULLY! [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 17:01:46.322 Main-Container>> INFO: Loading classes from:
+file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler/deploy/wcl/1581888799619/Storekeeper_C.jar
+file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler/deploy/wcl/1581888799619/workflows.jar
+ [com.tilab.wade.ca.WadeClassLoader getUrlList()]
+2020-02-16 17:01:46.373 Main-Container>> INFO: Agent ca@192.168.1.7:8172/JADE - STARTUP COMPLETED SUCCESSFULLY! [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 17:01:47.104 Main-Container>> INFO: CA ca@192.168.1.7:8172/JADE: updating existing container info [com.tilab.wade.ca.ControllerAgent handleAddedContainer()]
+2020-02-16 17:01:56.380 Main-Container>> INFO: CA ca@192.168.1.7:8172/JADE: New CA leader is ca@192.168.1.7:8172/JADE [com.tilab.wade.ca.ControllerAgent$1 leaderElected()]
+2020-02-16 17:01:56.381 Main-Container>> INFO: CA ca@192.168.1.7:8172/JADE: Leadership acquired [com.tilab.wade.ca.ControllerAgent becomeLeader()]
+2020-02-25 08:53:52.422 Main-Container>> INFO: >>>>>>>>>>>>>>>> current-directory   = C:\eclipse-jee-kepler-SR1-win32-x86_64\eclipse\workspaceKepler\toysAssembler [com.tilab.wade.Boot main()]
+2020-02-25 08:53:52.466 Main-Container>> INFO: >>>>>>>>>>>>>>>> project-home        = C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler [com.tilab.wade.Boot main()]
+2020-02-25 08:53:52.841 Main-Container>> INFO: Loading types from file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler/cfg/types.xml [com.tilab.wade.commons.TypeManager loadPlatformTypes()]
+2020-02-25 08:53:53.009 Main-Container>> INFO: Loading types from file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/WADE-3.6.0/wadeSuite/wade/cfg/types.xml [com.tilab.wade.commons.TypeManager loadPlatformTypes()]
+2020-02-25 08:53:53.703 Main-Container>> INFO: ----------------------------------
+    This is JADE 4.5.0 - revision 6825 of 23-05-2017 10:06:04
+    downloaded in Open Source, under LGPL restrictions,
+    at http://jade.tilab.com/
+---------------------------------------- [jade.core.Runtime beginContainer()]
+2020-02-25 08:53:54.976 Main-Container>> INFO: Listening for intra-platform commands on address:
+- jicp://192.168.1.7:8172
+ [jade.imtp.leap.LEAPIMTPManager initialize()]
+2020-02-25 08:53:56.575 Main-Container>> INFO: Service jade.core.management.AgentManagement initialized [jade.core.BaseService init()]
+2020-02-25 08:53:56.733 Main-Container>> INFO: Service jade.core.messaging.Messaging initialized [jade.core.BaseService init()]
+2020-02-25 08:53:56.775 Main-Container>> INFO: Service jade.core.resource.ResourceManagement initialized [jade.core.BaseService init()]
+2020-02-25 08:53:56.783 Main-Container>> INFO: Service jade.core.messaging.TopicManagement initialized [jade.core.BaseService init()]
+2020-02-25 08:53:56.801 Main-Container>> INFO: Service jade.core.event.Notification initialized [jade.core.BaseService init()]
+2020-02-25 08:53:57.587 Main-Container>> INFO: HTTP-MTP Using XML parser com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser [jade.mtp.http.HTTPServer <init>()]
+2020-02-25 08:53:57.598 Main-Container>> INFO: MTP addresses:
+http://DESKTOP-4MO2C6R:7778/acc [jade.core.messaging.MessagingService boot()]
+2020-02-25 08:53:58.639 Main-Container>> INFO: Agent perf@192.168.1.7:8172/JADE - Starting........... [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-25 08:53:58.639 Main-Container>> INFO: Agent ca@192.168.1.7:8172/JADE - Starting........... [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-25 08:53:58.662 Main-Container>> INFO: Agent cfa@192.168.1.7:8172/JADE - Starting........... [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-25 08:53:58.665 Main-Container>> INFO: Agent esa@192.168.1.7:8172/JADE - Starting........... [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-25 08:53:58.662 Main-Container>> INFO: Agent wsma@192.168.1.7:8172/JADE - Starting........... [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-25 08:53:58.674 Main-Container>> INFO: Container-Monitor agent activated [jade.core.AgentContainerImpl startBootstrapAgents()]
+2020-02-25 08:53:58.675 Main-Container>> INFO: --------------------------------------
+Agent container Main-Container@192.168.1.7 is ready.
+-------------------------------------------- [jade.core.AgentContainerImpl joinPlatform()]
+2020-02-25 08:53:58.738 Main-Container>> INFO: Agent perf@192.168.1.7:8172/JADE - Ready ... [com.tilab.wade.performer.WorkflowEngineAgent agentSpecificSetup()]
+2020-02-25 08:53:58.895 Main-Container>> INFO: Agent cfa@192.168.1.7:8172/JADE: ConfigurationLoader class is com.tilab.wade.cfa.beans.ConfigurationLoaderImpl [com.tilab.wade.cfa.ConfigurationAgent agentSpecificSetup()]
+2020-02-25 08:53:58.908 Main-Container>> INFO: Agent wsma@192.168.1.7:8172/JADE - Using Storage com.tilab.wade.wsma.MemoryStorage [com.tilab.wade.wsma.WorkflowStatusManagerAgent agentSpecificSetup()]
+2020-02-25 08:53:58.909 Main-Container>> INFO: Agent wsma@192.168.1.7:8172/JADE - Executions cleanup mechanism disabled [com.tilab.wade.wsma.WorkflowStatusManagerAgent agentSpecificSetup()]
+2020-02-25 08:53:58.927 Main-Container>> INFO: Agent perf@192.168.1.7:8172/JADE - STARTUP COMPLETED SUCCESSFULLY! [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-25 08:53:58.932 Main-Container>> INFO: Agent esa@192.168.1.7:8172/JADE - STARTUP COMPLETED SUCCESSFULLY! [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-25 08:53:58.939 Main-Container>> INFO: Agent wsma@192.168.1.7:8172/JADE - STARTUP COMPLETED SUCCESSFULLY! [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-25 08:53:59.366 Main-Container>> INFO: Agent cfa@192.168.1.7:8172/JADE: Control-Agent class is com.tilab.wade.ca.ControllerAgent [com.tilab.wade.cfa.ConfigurationAgent agentSpecificSetup()]
+2020-02-25 08:53:59.367 Main-Container>> INFO: Agent cfa@192.168.1.7:8172/JADE: Backup-Main-Control-Agent class is com.tilab.wade.bca.BackupControllerAgent [com.tilab.wade.cfa.ConfigurationAgent agentSpecificSetup()]
+2020-02-25 08:53:59.388 Main-Container>> INFO: Agent cfa@192.168.1.7:8172/JADE - STARTUP COMPLETED SUCCESSFULLY! [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-25 08:54:00.931 Main-Container>> INFO: Loading classes from:
+file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler/deploy/wcl/1581888799619/Storekeeper_C.jar
+file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler/deploy/wcl/1581888799619/workflows.jar
+ [com.tilab.wade.ca.WadeClassLoader getUrlList()]
+2020-02-25 08:54:01.860 Main-Container>> INFO: Agent ca@192.168.1.7:8172/JADE - STARTUP COMPLETED SUCCESSFULLY! [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-25 08:54:01.917 Main-Container>> INFO: CA ca@192.168.1.7:8172/JADE: updating existing container info [com.tilab.wade.ca.ControllerAgent handleAddedContainer()]
+2020-02-25 08:54:11.874 Main-Container>> INFO: CA ca@192.168.1.7:8172/JADE: New CA leader is ca@192.168.1.7:8172/JADE [com.tilab.wade.ca.ControllerAgent$1 leaderElected()]
+2020-02-25 08:54:11.876 Main-Container>> INFO: CA ca@192.168.1.7:8172/JADE: Leadership acquired [com.tilab.wade.ca.ControllerAgent becomeLeader()]
+2020-02-25 19:36:03.065 Main-Container>> INFO: >>>>>>>>>>>>>>>> current-directory   = C:\eclipse-jee-kepler-SR1-win32-x86_64\eclipse\workspaceKepler\toysAssembler [com.tilab.wade.Boot main()]
+2020-02-25 19:36:03.081 Main-Container>> INFO: >>>>>>>>>>>>>>>> project-home        = C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler [com.tilab.wade.Boot main()]
+2020-02-25 19:36:03.454 Main-Container>> INFO: Loading types from file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler/cfg/types.xml [com.tilab.wade.commons.TypeManager loadPlatformTypes()]
+2020-02-25 19:36:03.641 Main-Container>> INFO: Loading types from file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/WADE-3.6.0/wadeSuite/wade/cfg/types.xml [com.tilab.wade.commons.TypeManager loadPlatformTypes()]
+2020-02-25 19:36:04.358 Main-Container>> INFO: ----------------------------------
+    This is JADE 4.5.0 - revision 6825 of 23-05-2017 10:06:04
+    downloaded in Open Source, under LGPL restrictions,
+    at http://jade.tilab.com/
+---------------------------------------- [jade.core.Runtime beginContainer()]
+2020-02-25 19:36:05.373 Main-Container>> WARNING: Error adding ICP jade.imtp.leap.JICP.JICPPeer@24a35978[Cannot bind server socket to localhost port 8172]. [jade.imtp.leap.CommandDispatcher addICP()]
+2020-02-25 19:36:05.383 Main-Container>> SEVERE: Communication failure while joining agent platform: No ICP active [jade.core.AgentContainerImpl joinPlatform()]
+2020-02-25 19:36:05.414 Main-Container>> INFO: JADE is closing down now. [jade.core.Runtime$1 run()]
+2020-02-25 19:36:48.382 Main-Container>> INFO: >>>>>>>>>>>>>>>> current-directory   = C:\eclipse-jee-kepler-SR1-win32-x86_64\eclipse\workspaceKepler\toysAssembler [com.tilab.wade.Boot main()]
+2020-02-25 19:36:48.384 Main-Container>> INFO: >>>>>>>>>>>>>>>> project-home        = C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler [com.tilab.wade.Boot main()]
+2020-02-25 19:36:48.545 Main-Container>> INFO: Loading types from file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler/cfg/types.xml [com.tilab.wade.commons.TypeManager loadPlatformTypes()]
+2020-02-25 19:36:48.615 Main-Container>> INFO: Loading types from file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/WADE-3.6.0/wadeSuite/wade/cfg/types.xml [com.tilab.wade.commons.TypeManager loadPlatformTypes()]
+2020-02-25 19:36:49.083 Main-Container>> INFO: ----------------------------------
+    This is JADE 4.5.0 - revision 6825 of 23-05-2017 10:06:04
+    downloaded in Open Source, under LGPL restrictions,
+    at http://jade.tilab.com/
+---------------------------------------- [jade.core.Runtime beginContainer()]
+2020-02-25 19:36:49.967 Main-Container>> WARNING: Error adding ICP jade.imtp.leap.JICP.JICPPeer@4ac68d3e[Cannot bind server socket to localhost port 8172]. [jade.imtp.leap.CommandDispatcher addICP()]
+2020-02-25 19:36:49.967 Main-Container>> SEVERE: Communication failure while joining agent platform: No ICP active [jade.core.AgentContainerImpl joinPlatform()]
+2020-02-25 19:36:49.983 Main-Container>> INFO: JADE is closing down now. [jade.core.Runtime$1 run()]
+2020-02-25 19:37:19.178 Main-Container>> INFO: >>>>>>>>>>>>>>>> current-directory   = C:\eclipse-jee-kepler-SR1-win32-x86_64\eclipse\workspaceKepler\toysAssembler [com.tilab.wade.Boot main()]
+2020-02-25 19:37:19.178 Main-Container>> INFO: >>>>>>>>>>>>>>>> project-home        = C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler [com.tilab.wade.Boot main()]
+2020-02-25 19:37:19.360 Main-Container>> INFO: Loading types from file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler/cfg/types.xml [com.tilab.wade.commons.TypeManager loadPlatformTypes()]
+2020-02-25 19:37:19.441 Main-Container>> INFO: Loading types from file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/WADE-3.6.0/wadeSuite/wade/cfg/types.xml [com.tilab.wade.commons.TypeManager loadPlatformTypes()]
+2020-02-25 19:37:20.131 Main-Container>> INFO: ----------------------------------
+    This is JADE 4.5.0 - revision 6825 of 23-05-2017 10:06:04
+    downloaded in Open Source, under LGPL restrictions,
+    at http://jade.tilab.com/
+---------------------------------------- [jade.core.Runtime beginContainer()]
+2020-02-25 19:37:21.205 Main-Container>> WARNING: Error adding ICP jade.imtp.leap.JICP.JICPPeer@24a35978[Cannot bind server socket to localhost port 8172]. [jade.imtp.leap.CommandDispatcher addICP()]
+2020-02-25 19:37:21.217 Main-Container>> SEVERE: Communication failure while joining agent platform: No ICP active [jade.core.AgentContainerImpl joinPlatform()]
+2020-02-25 19:37:21.217 Main-Container>> INFO: JADE is closing down now. [jade.core.Runtime$1 run()]
+2020-02-25 19:39:50.201 Main-Container>> INFO: >>>>>>>>>>>>>>>> current-directory   = C:\eclipse-jee-kepler-SR1-win32-x86_64\eclipse\workspaceKepler\toysAssembler [com.tilab.wade.Boot main()]
+2020-02-25 19:39:50.201 Main-Container>> INFO: >>>>>>>>>>>>>>>> project-home        = C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler [com.tilab.wade.Boot main()]
+2020-02-25 19:39:50.386 Main-Container>> INFO: Loading types from file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler/cfg/types.xml [com.tilab.wade.commons.TypeManager loadPlatformTypes()]
+2020-02-25 19:39:50.448 Main-Container>> INFO: Loading types from file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/WADE-3.6.0/wadeSuite/wade/cfg/types.xml [com.tilab.wade.commons.TypeManager loadPlatformTypes()]
+2020-02-25 19:39:50.903 Main-Container>> INFO: ----------------------------------
+    This is JADE 4.5.0 - revision 6825 of 23-05-2017 10:06:04
+    downloaded in Open Source, under LGPL restrictions,
+    at http://jade.tilab.com/
+---------------------------------------- [jade.core.Runtime beginContainer()]
+2020-02-25 19:39:51.796 Main-Container>> INFO: Listening for intra-platform commands on address:
+- jicp://192.168.1.9:1099
+ [jade.imtp.leap.LEAPIMTPManager initialize()]
+2020-02-25 19:39:52.283 Main-Container>> INFO: Service jade.core.management.AgentManagement initialized [jade.core.BaseService init()]
+2020-02-25 19:39:52.329 Main-Container>> INFO: Service jade.core.messaging.Messaging initialized [jade.core.BaseService init()]
+2020-02-25 19:39:52.346 Main-Container>> INFO: Service jade.core.resource.ResourceManagement initialized [jade.core.BaseService init()]
+2020-02-25 19:39:52.346 Main-Container>> INFO: Service jade.core.messaging.TopicManagement initialized [jade.core.BaseService init()]
+2020-02-25 19:39:52.362 Main-Container>> INFO: Service jade.core.mobility.AgentMobility initialized [jade.core.BaseService init()]
+2020-02-25 19:39:52.362 Main-Container>> INFO: Service jade.core.event.Notification initialized [jade.core.BaseService init()]
+2020-02-25 19:39:52.378 Main-Container>> INFO: Service jade.core.replication.MainReplication initialized [jade.core.BaseService init()]
+2020-02-25 19:39:52.509 Main-Container>> INFO: Container-Monitor agent activated [jade.core.AgentContainerImpl startBootstrapAgents()]
+2020-02-25 19:39:52.509 Main-Container>> INFO: --------------------------------------
+Agent container Main-Container@192.168.1.9 is ready.
+-------------------------------------------- [jade.core.AgentContainerImpl joinPlatform()]
+2020-02-25 19:39:52.518 Main-Container>> INFO: Agent raa@TOYS-ASSEMBLER - Starting........... [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-25 19:39:52.547 Main-Container>> INFO: Agent cfa@TOYS-ASSEMBLER - Starting........... [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-25 19:39:52.763 Main-Container>> INFO: Agent raa@TOYS-ASSEMBLER - Reading agent allocation rules from file /raa/raa.xml [com.tilab.wade.raa.RuntimeAllocatorAgent readConfiguration()]
+2020-02-25 19:39:52.763 Main-Container>> INFO: Agent cfa@TOYS-ASSEMBLER: ConfigurationLoader class is com.tilab.wade.cfa.beans.ConfigurationLoaderImpl [com.tilab.wade.cfa.ConfigurationAgent agentSpecificSetup()]
+2020-02-25 19:39:52.895 Main-Container>> INFO: Agent cfa@TOYS-ASSEMBLER: Control-Agent class is com.tilab.wade.ca.ControllerAgent [com.tilab.wade.cfa.ConfigurationAgent agentSpecificSetup()]
+2020-02-25 19:39:52.895 Main-Container>> INFO: Agent cfa@TOYS-ASSEMBLER: Backup-Main-Control-Agent class is com.tilab.wade.bca.BackupControllerAgent [com.tilab.wade.cfa.ConfigurationAgent agentSpecificSetup()]
+2020-02-25 19:39:52.910 Main-Container>> INFO: Agent raa@TOYS-ASSEMBLER - Initialized 1 allocation rules [com.tilab.wade.raa.RuntimeAllocatorAgent readConfiguration()]
+2020-02-25 19:39:52.948 Main-Container>> INFO: Agent cfa@TOYS-ASSEMBLER - STARTUP COMPLETED SUCCESSFULLY! [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-25 19:39:52.948 Main-Container>> INFO: Agent raa@TOYS-ASSEMBLER - STARTUP COMPLETED SUCCESSFULLY! [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-25 19:39:55.647 Main-Container>> INFO: Adding node <GW-Wolf> to the platform [jade.core.PlatformManagerImpl localAddNode()]
+2020-02-25 19:39:55.650 Main-Container>> INFO: --- Node <GW-Wolf> ALIVE --- [jade.core.PlatformManagerImpl$1 nodeAdded()]
+2020-02-25 19:40:37.810 Main-Container>> INFO: Agent cfa@TOYS-ASSEMBLER: Serving action startup-platform [com.tilab.wade.cfa.ConfigurationAgent serveStartupPlatform()]
+2020-02-25 19:40:38.468 Main-Container>> INFO: Agent cfa@TOYS-ASSEMBLER: Launching container Searchers with JavaArgs  -Djava.util.logging.config.file=cfg\log\log.properties and JadeArgs -container-name Searchers -platform-id TOYS-ASSEMBLER -host 192.168.1.9 -port 1099 -services jade.core.mobility.AgentMobilityService;jade.core.event.NotificationService;jade.core.messaging.TopicManagementService; -platform-startup-time 1582677592547 -container -agents CA-%C:com.tilab.wade.ca.ControllerAgent -export-host localhost [com.tilab.wade.cfa.ConfigurationAgent startContainer()]
+2020-02-25 19:40:38.468 Main-Container>> INFO: Agent cfa@TOYS-ASSEMBLER - WADE-only container startup: No project-name specified [com.tilab.wade.cfa.ConfigurationAgent start()]
+2020-02-25 19:40:40.045 Main-Container>> INFO: Adding node <Searchers> to the platform [jade.core.PlatformManagerImpl localAddNode()]
+2020-02-25 19:40:40.061 Main-Container>> INFO: --- Node <Searchers> ALIVE --- [jade.core.PlatformManagerImpl$1 nodeAdded()]
+2020-02-25 19:40:40.658 Main-Container>> INFO: Agent raa@TOYS-ASSEMBLER: Container Searchers detected - CA is CA-Searchers@TOYS-ASSEMBLER [com.tilab.wade.raa.RuntimeAllocatorAgent$1 handleInform()]
+2020-02-25 19:40:40.705 Main-Container>> INFO: Agent cfa@TOYS-ASSEMBLER: Starting agent searcher2 in container Searchers [com.tilab.wade.cfa.AgentsStarter action()]
+2020-02-25 19:40:40.846 Main-Container>> INFO: Agent cfa@TOYS-ASSEMBLER: Starting agent searcher1 in container Searchers [com.tilab.wade.cfa.AgentsStarter action()]
+2020-02-25 19:40:40.908 Main-Container>> INFO: Agent cfa@TOYS-ASSEMBLER: Launching container Assembler with JavaArgs  -Djava.util.logging.config.file=cfg\log\log.properties and JadeArgs -container-name Assembler -platform-id TOYS-ASSEMBLER -host 192.168.1.9 -port 1099 -services jade.core.mobility.AgentMobilityService;jade.core.event.NotificationService;jade.core.messaging.TopicManagementService; -platform-startup-time 1582677592547 -container -agents CA-%C:com.tilab.wade.ca.ControllerAgent -export-host localhost [com.tilab.wade.cfa.ConfigurationAgent startContainer()]
+2020-02-25 19:40:40.908 Main-Container>> INFO: Agent cfa@TOYS-ASSEMBLER - WADE-only container startup: No project-name specified [com.tilab.wade.cfa.ConfigurationAgent start()]
+2020-02-25 19:40:41.825 Main-Container>> INFO: Adding node <Assembler> to the platform [jade.core.PlatformManagerImpl localAddNode()]
+2020-02-25 19:40:41.848 Main-Container>> INFO: --- Node <Assembler> ALIVE --- [jade.core.PlatformManagerImpl$1 nodeAdded()]
+2020-02-25 19:40:41.879 Main-Container>> INFO: Agent raa@TOYS-ASSEMBLER: Container Assembler detected - CA is CA-Assembler@TOYS-ASSEMBLER [com.tilab.wade.raa.RuntimeAllocatorAgent$1 handleInform()]
+2020-02-25 19:40:41.879 Main-Container>> INFO: Agent cfa@TOYS-ASSEMBLER: Starting agent assembler in container Assembler [com.tilab.wade.cfa.AgentsStarter action()]
+2020-02-25 21:12:05.531 Main-Container>> INFO: Agent cfa@TOYS-ASSEMBLER: Serving action shutdown-platform [com.tilab.wade.cfa.ConfigurationAgent serveShutdownPlatform()]
+2020-02-25 21:12:05.686 Main-Container>> INFO: Agent cfa@TOYS-ASSEMBLER: Killing container Assembler [com.tilab.wade.cfa.ConfigurationAgent$1 onEnd()]
+2020-02-25 21:12:05.702 Main-Container>> INFO: Agent ams - KillContainer request received from cfa. Container=Assembler@<Unknown Host> [jade.domain.ams killContainerAction()]
+2020-02-25 21:12:05.749 Main-Container>> INFO: PING from node Assembler returned [EXIT] [jade.core.nodeMonitoring.BlockingNodeFailureMonitor run()]
+2020-02-25 21:12:05.749 Main-Container>> INFO: --- Node <Assembler> TERMINATED --- [jade.core.PlatformManagerImpl removeTerminatedNode()]
+2020-02-25 21:12:05.749 Main-Container>> INFO: Removing node <Assembler> from the platform [jade.core.PlatformManagerImpl localRemoveNode()]
+2020-02-25 21:12:05.749 Main-Container>> INFO: Agent cfa@TOYS-ASSEMBLER: Container Assembler successfully killed [com.tilab.wade.cfa.ConfigurationAgent$1 onEnd()]
+2020-02-25 21:12:05.749 Main-Container>> INFO: Agent cfa@TOYS-ASSEMBLER: Killing container Searchers [com.tilab.wade.cfa.ConfigurationAgent$1 onEnd()]
+2020-02-25 21:12:05.780 Main-Container>> INFO: Agent ams - KillContainer request received from cfa. Container=Searchers@<Unknown Host> [jade.domain.ams killContainerAction()]
+2020-02-25 21:12:05.795 Main-Container>> INFO: PING from node Searchers returned [EXIT] [jade.core.nodeMonitoring.BlockingNodeFailureMonitor run()]
+2020-02-25 21:12:05.795 Main-Container>> INFO: --- Node <Searchers> TERMINATED --- [jade.core.PlatformManagerImpl removeTerminatedNode()]
+2020-02-25 21:12:05.795 Main-Container>> INFO: Removing node <Searchers> from the platform [jade.core.PlatformManagerImpl localRemoveNode()]
+2020-02-25 21:12:05.795 Main-Container>> INFO: Agent raa@TOYS-ASSEMBLER: Container Assembler removed [com.tilab.wade.raa.RuntimeAllocatorAgent$1 handleInform()]
+2020-02-25 21:12:05.811 Main-Container>> INFO: Agent cfa@TOYS-ASSEMBLER: Container Searchers successfully killed [com.tilab.wade.cfa.ConfigurationAgent$1 onEnd()]
+2020-02-25 21:12:05.858 Main-Container>> INFO: Agent raa@TOYS-ASSEMBLER: Container Searchers removed [com.tilab.wade.raa.RuntimeAllocatorAgent$1 handleInform()]

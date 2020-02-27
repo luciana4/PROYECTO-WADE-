@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+    <extension-point id="com.tilab.wolf.ActivityManagers" name="ActivityManagers" schema="schema/com.tilab.wolf.ActivityManagers.exsd"/>
+	
+	<extension point="org.eclipse.ui.actionSets">
+		<actionSet label="Wolf Action Set" visible="true" id="com.tilab.wolf.actionSet">
+            <menu label="%menu.label.0" id="wolfMenu">
+            	<separator name="wolfGroup"/>
+            	<separator name="editor"/>
+            	<separator name="view"/>
+            </menu>
+            <action label="%action.label.0"
+				icon="icons/tree.png"
+				class="com.tilab.wolf.administration.actions.OpenAgentTreeView"
+				tooltip="%action.tooltip.0"
+				menubarPath="wolfMenu/wolfGroup"
+				toolbarPath="wolf"
+				id="com.tilab.wolf.actions.OpenAgentTreeView">
+			</action>
+		</actionSet>
+	</extension>
+	
+	<extension point="org.eclipse.ui.views">
+		<category id="com.tilab.wolf" name="%category.name.0"/>
+		<view category="com.tilab.wolf"
+			class="com.tilab.wolf.administration.views.agentTree.AgentTreeView"
+			icon="icons/tree.png"
+			id="com.tilab.wolf.views.AgentTreeView"
+			name="%view.name.0">
+		</view>
+		<view category="com.tilab.wolf"
+			class="com.tilab.wolf.wfeditor.views.ProblemsView"
+			icon="icons/problemview.png"
+			id="com.tilab.wolf.views.ProblemsView"
+			name="Workflow Problems">
+		</view>
+        <view
+            allowMultiple="false"
+			category="com.tilab.wolf"
+			class="com.tilab.wolf.wfeditor.actions.workflow.search.WorkflowSearchView"
+			icon="icons/searchWf.png"
+			id="com.tilab.wolf.views.WorkflowSearchView"
+			name="Workflow Search">
+		</view>
+	</extension>
+	
+	<extension point="org.eclipse.ui.editors">
+		<editor class="com.tilab.wolf.administration.editors.AgentDetailsEditor"
+			icon="icons/agent.png"
+			id="com.tilab.wolf.editors.AgentDetailsEditor"
+			name="%editor.name.0">
+		</editor>
+		<editor class="com.tilab.wolf.administration.editors.WorkflowExecutionEditor"
+			icon="icons/executeWf.png"
+			id="com.tilab.wolf.editors.WorkflowExecutionEditor"
+			name="%editor.name.1">
+		</editor>
+		<editor class="com.tilab.wolf.administration.editors.QuickLaunchWorkflowEditor"
+			icon="icons/executeWf.png"
+			id="com.tilab.wolf.editors.QuickLaunchWorkflowEditor"
+			name="%editor.name.1">
+		</editor>
+		<editor class="com.tilab.wolf.wfeditor.WolfEditor"
+        	icon="icons/editWf.png"
+        	id="com.tilab.wolf.wfeditor.WolfEditor"
+        	name="%editor.name.2"
+        	contributorClass="com.tilab.wolf.wfeditor.WolfActionBarContributor">
+		</editor>
+	</extension>
+	
+	<extension id="wadenature"
+		name="Wade Nature"
+		point="org.eclipse.core.resources.natures">
+		<runtime>
+			<run class="com.tilab.wolf.WadeNature"/>
+		</runtime>
+		<requires-nature id="org.eclipse.jdt.core.javanature"/>
+	</extension>
+	
+	<extension point="org.eclipse.ui.popupMenus">
+		<objectContribution id="com.tilab.wolf.WadeTools" objectClass="org.eclipse.jdt.core.IJavaProject">
+			<visibility>
+           		<objectState name="projectNature" value="com.tilab.wolf.wadenature"/>
+       		</visibility>
+			<menu id="wadeTools.menu" label="WADE Tools">
+				<separator name="import"/>
+				<separator name="launch"/>
+				<separator name="nature"/>
+				<separator name="modules"/>
+				<separator name="installationPackage"/>
+			</menu>
+			<!-- Remove wade nature -->
+			<action class="com.tilab.wolf.administration.actions.RemoveWadeNature"
+				icon="icons/wade.png"
+				id="com.tilab.wolf.JavaProjectCustomization2.RemoveWadeNature"
+				label="%action.label.2"
+				menubarPath="wadeTools.menu/nature">
+			</action>
+			<!-- Import wsdl -->
+			<action
+             	class="com.tilab.wolf.administration.actions.ImportWSDL"
+             	icon="icons/ws-import.png"
+             	id="com.tilab.wolf.WadeTools.WSDLImporter"
+             	label="Import WSDL"
+             	menubarPath="wadeTools.menu/import">
+       		</action>
+       		<!-- Run BootDaemon -->
+       		<action
+               class="com.tilab.wolf.administration.actions.RunBootDaemon"
+               id="com.tilab.wolf.JavaProjectCustomization4.RunBootDaemon"
+               label="Run BootDaemon"
+               menubarPath="wadeTools.menu/launch">
+			</action>
+			<!-- Run Main -->
+       		<action class="com.tilab.wolf.administration.actions.RunWadeMainContainer"
+				id="com.tilab.wolf.JavaProjectCustomization3.RunWadeMainContainer"
+				label="Run Main Container"
+				menubarPath="wadeTools.menu/launch">
+			</action>
+			<!-- Debug BootDaemon -->
+			<action class="com.tilab.wolf.administration.actions.DebugBootDaemon"
+				id="com.tilab.wolf.JavaProjectCustomization4.DebugBootDaemon"
+				label="Debug BootDaemon"
+				menubarPath="wadeTools.menu/launch">
+			</action>
+			<!-- Debug Main -->
+			<action class="com.tilab.wolf.administration.actions.DebugWadeMainContainer"
+				id="com.tilab.wolf.JavaProjectCustomization3.DebugWadeMainContainer"
+				label="Debug Main Container"
+				menubarPath="wadeTools.menu/launch">
+			</action>
+			<!-- Add module -->
+			<action class="com.tilab.wolf.wfeditor.actions.modules.AddModuleAction"
+				icon="icons/addModule.png"
+				id="com.tilab.wolf.administration.actions.modules.AddModule"
+				label="Add Module"
+				menubarPath="wadeTools.menu/modules">
+			</action>
+			<!-- Create Installation Package -->
+			<action class="com.tilab.wolf.administration.installationPackage.CreateInstallationPackage"
+				icon="icons/installationPackage.png"
+				id="com.tilab.wolf.administration.actions.CreateInstallationPackage"
+				label="Create Installation Package"
+				menubarPath="wadeTools.menu/installationPackage">
+			</action>
+		</objectContribution>
+		
+		<!-- Open Workflow, Quick Launch, Execute Workflow, Test Print -->
+		<objectContribution id="com.tilab.wolf.CompilationUnitCustomization" objectClass="org.eclipse.jdt.core.ICompilationUnit">
+			<visibility>
+				<and>
+					<objectState name="projectNature" value="com.tilab.wolf.wadenature"/>
+					<objectState name="isWorkflow" value="true"/>
+				</and>
+       		</visibility>
+       		<menu id="wadeTools.menu" label="WADE Tools">
+				<separator name="workflow"/>
+			</menu>
+			<action class="com.tilab.wolf.wfeditor.actions.workflow.open.OpenWorkflowEditor"
+				icon="icons/editWf.png"
+				id="com.tilab.wolf.CompilationUnitCustomization.OpenWorkflowEditor"
+				label="%action.label.5"
+				menubarPath="wadeTools.menu/workflow" />
+			<action class="com.tilab.wolf.administration.actions.QuickLaunchWorkflowAction"
+				icon="icons/executeWf.png"
+				id="com.tilab.wolf.CompilationUnitCustomization.QuickLaunchWorkflow"
+				label="%QuickLaunch.label"
+				menubarPath="wadeTools.menu/workflow" />
+			<action class="com.tilab.wolf.administration.actions.ExecuteWorkflowAction"
+				icon="icons/executeWf.png"
+				id="com.tilab.wolf.CompilationUnitCustomization.ExecuteWorkflow"
+				label="%action.label.4"
+				menubarPath="wadeTools.menu/workflow" />
+		</objectContribution>
+		
+		<!-- Expose web Service Jar-->
+		<objectContribution id="com.tilab.wolf.WebServiceExpose" objectClass="org.eclipse.core.resources.IFile" nameFilter="*_S.jar">
+       		<visibility>
+					<objectState name="projectNature" value="com.tilab.wolf.wadenature"/>
+       		</visibility>
+       		<menu id="wadeTools.menu" label="WADE Tools">
+				<separator name="jar"/>
+			</menu>
+			<action class="com.tilab.wolf.administration.actions.WebServiceExpose"
+				icon="icons/deploy.png"
+				id="com.tilab.wolf.administration.actions.ExposeJar"
+				label="Expose"
+				menubarPath="wadeTools.menu/jar"/>
+		</objectContribution>
+		<!-- Deploy web Service Jar (for wsdl imported as client) -->
+		<objectContribution id="com.tilab.wolf.WebServiceDeploy" objectClass="org.eclipse.core.resources.IFile" nameFilter="*_C.jar">
+       		<visibility>
+					<objectState name="projectNature" value="com.tilab.wolf.wadenature"/>
+       		</visibility>
+       		<menu id="wadeTools.menu" label="WADE Tools">
+				<separator name="jar"/>
+			</menu>
+			<action class="com.tilab.wolf.administration.actions.WebServiceDeploy"
+				icon="icons/deploy.png"
+				id="com.tilab.wolf.administration.actions.DeployJar"
+				label="Deploy"
+				menubarPath="wadeTools.menu/jar"/>
+		</objectContribution>
+		<!-- Web Service Server Delete -->
+		<objectContribution id="com.tilab.wolf.WSServerDelete" objectClass="org.eclipse.core.resources.IFile" nameFilter="*_S.jar">
+       		<visibility>
+					<objectState name="projectNature" value="com.tilab.wolf.wadenature"/>
+       		</visibility>
+       		<menu id="wadeTools.menu" label="WADE Tools">
+				<separator name="jar"/>
+			</menu>
+			<action class="com.tilab.wolf.administration.actions.WebServiceDelete"
+				icon="icons/delete.png"
+				id="com.tilab.wolf.administration.WSServerDelete"
+				label="Delete"
+				menubarPath="wadeTools.menu/jar"/>
+		</objectContribution>
+		<!-- Web Service Client Delete -->
+		<objectContribution id="com.tilab.wolf.WSClientDelete" objectClass="org.eclipse.core.resources.IFile" nameFilter="*_C.jar">
+       		<visibility>
+					<objectState name="projectNature" value="com.tilab.wolf.wadenature"/>
+       		</visibility>
+       		<menu id="wadeTools.menu" label="WADE Tools">
+				<separator name="jar"/>
+			</menu>
+			<action class="com.tilab.wolf.administration.actions.WebServiceDelete"
+				icon="icons/delete.png"
+				id="com.tilab.wolf.administration.WSClientDelete"
+				label="Delete"
+				menubarPath="wadeTools.menu/jar"/>
+		</objectContribution>
+		
+		<!-- Add wade nature -->
+		<objectContribution id="com.tilab.wolf.JavaProjectCustomization1" objectClass="org.eclipse.jdt.core.IJavaProject">
+			<visibility>
+        		<not>
+            		<objectState name="projectNature" value="com.tilab.wolf.wadenature"/>
+	            </not>
+       		</visibility>
+       		<menu id="wadeTools.menu" label="WADE Tools">
+				<separator name="nature"/>
+			</menu>
+			<action class="com.tilab.wolf.administration.actions.AddWadeNature"
+				icon="icons/wade.png"
+				id="com.tilab.wolf.JavaProjectCustomization1.AddWadeNature"
+				label="%action.label.1"
+				menubarPath="wadeTools.menu/nature">
+			</action>
+		</objectContribution>
+  		<objectContribution
+        		adaptable="false"
+        		id="com.tilab.wolf.Modules"
+        		nameFilter="modules/*"
+        		objectClass="org.eclipse.jdt.core.IPackageFragmentRoot">
+     		<visibility>
+        		<objectState
+              		name="projectNature"
+              		value="com.tilab.wolf.wadenature">
+        		</objectState>
+     		</visibility>
+    		<menu
+           		id="wadeTools.menu"
+           		label="WADE Tools">
+        		<separator
+              		name="modules">
+        		</separator>
+     		</menu>
+	        <action
+	             class="com.tilab.wolf.administration.actions.DeployModuleAction"
+	             icon="icons/deployModule.png"
+	             id="com.tilab.wolf.wfeditor.DeployModule"
+	             label="Deploy Module"
+	             menubarPath="wadeTools.menu/modules">
+	        </action>
+	        <action
+	             class="com.tilab.wolf.administration.actions.ExportModuleAction"
+	             icon="icons/exportModule.png"
+	             id="com.tilab.wolf.wfeditor.ExportModule"
+	             label="Export Module"
+	             menubarPath="wadeTools.menu/modules">
+	        </action>
+	        <action
+	             class="com.tilab.wolf.wfeditor.actions.modules.DeleteModuleAction"
+	             icon="icons/deleteModule.png"
+	             id="com.tilab.wolf.wfeditor.DeleteModule"
+	             label="Delete Module"
+	             menubarPath="wadeTools.menu/modules">
+ 	        </action>
+     		<action
+           		class="com.tilab.wolf.wfeditor.actions.modules.EditModuleAction"
+           		icon="icons/editModule.png"
+           		id="com.tilab.wolf.wfeditor.EditModule"
+           		label="Edit Module"
+           		menubarPath="wadeTools.menu/modules">
+     		</action>
+  		</objectContribution>
+    </extension>
+	
+	<extension point="org.eclipse.ui.propertyPages">
+		<page class="com.tilab.wolf.preferences.wadeProperties.ui.WadePropertiesPage" 
+			id="com.tilab.wolf.preferences.WadePropertyPage" name="%page.name.0">
+			<filter name="projectNature" value="com.tilab.wolf.wadenature"/>
+			<enabledWhen>
+				<instanceof value="org.eclipse.jdt.core.IJavaProject"/>
+			</enabledWhen>
+        </page>
+	</extension>
+	
+	<extension point="org.eclipse.jdt.core.classpathContainerInitializer">
+		<classpathContainerInitializer class="com.tilab.wolf.WadeClasspathContainerInitializer"
+			id="WADE-Classpath">
+		</classpathContainerInitializer>
+	</extension>
+	
+	<extension point="org.eclipse.ui.editorActions"> 
+      <editorContribution 
+         id="com.tilab.wolf.editorActions.editorContribution1" 
+         targetID="com.tilab.wolf.wfeditor.WolfEditor">
+         <action
+               class="com.tilab.wolf.wfeditor.actions.workflow.RefreshWolfEditorAction"
+               disabledIcon="icons/refresh-d.png"
+               icon="icons/refresh.png"
+               id="com.tilab.wolf.actions.RefreshWolfEditorAction"
+               label="Refresh workflow"
+               menubarPath="wolfMenu/editor"
+               toolbarPath="wolfEditor"
+               tooltip="Refresh workflow"> 
+         </action> 
+         <action
+               class="com.tilab.wolf.wfeditor.actions.activitySet.DeleteActivitySetAction"
+               disabledIcon="icons/as_delete-d.png"
+               icon="icons/as_delete.png"
+               id="com.tilab.wolf.actions.DeleteActivitySetAction"
+               label="Delete Activity Set"
+               menubarPath="wolfMenu/editor"
+               toolbarPath="wolfEditor"
+               tooltip="Delete Activity Set">
+         </action> 
+         <action
+               class="com.tilab.wolf.wfeditor.actions.activitySet.CreateActivitySetAction"
+               disabledIcon="icons/as_new-d.png"
+               icon="icons/as_new.png"
+               id="com.tilab.wolf.actions.CreateActivitySetAction"
+               label="Create Activity Set"
+               menubarPath="wolfMenu/editor"
+               toolbarPath="wolfEditor"
+               tooltip="Create Activity Set">
+         </action>
+         <action
+               id="com.tilab.wolf.actions.ViewPageBreaksAction"
+               class="com.tilab.wolf.wfeditor.actions.ViewPageBreaksAction"
+               icon="icons/viewpagebreaks.png"
+               disabledIcon="icons/viewpagebreaks-d.png"
+               label="Page Breaks"
+               menubarPath="wolfMenu/view"
+               toolbarPath="wolfView"
+               tooltip="Enable/Disable Page Breaks" 
+               style="toggle"> 
+         </action>
+      </editorContribution> 
+   </extension>
+   
+   <extension point="org.eclipse.ui.newWizards">
+      <category name="Wolf" id="org.eclipse.wolf"/>
+      <wizard
+            name="Workflow"
+            icon="icons/wf_new.png"
+            category="org.eclipse.wolf"
+            class="com.tilab.wolf.wfeditor.actions.workflow.create.WorkflowCreateWizard"
+            id="org.eclipse.wolf.new.workflow">
+         <selection class="org.eclipse.core.resources.IResource" />
+      </wizard>
+      <wizard
+            category="org.eclipse.wolf"
+            class="com.tilab.wolf.administration.actions.wizard.WadeProjectWizard"
+            icon="icons/wadeNew.png"
+            id="org.eclipse.wolf.new.wadeProject"
+            name="Wade Project">
+         <selection
+               class="org.eclipse.core.resources.IResource">
+         </selection>
+      </wizard>
+   </extension>
+   
+   <extension point="org.eclipse.core.variables.dynamicVariables">
+      <variable
+            description="Wolf Home"
+            name="wolf_home"
+            resolver="com.tilab.wolf.WolfHomeResolver"
+            supportsArgument="false">
+      </variable>
+   </extension>
+   
+   <extension point="org.eclipse.ui.preferencePages">
+      <page class="com.tilab.wolf.preferences.EmptyPreferencePage"
+            id="com.tilab.wolf.preferences.WolfPreferencesPage"
+            name="Wolf">
+      </page>
+      <page class="com.tilab.wolf.preferences.EmptyPreferencePage"
+            id="com.tilab.wolf.preferences.EditorPreferencePage"
+            category="com.tilab.wolf.preferences.WolfPreferencesPage"
+            name="Editor">
+      </page>
+      <page class="com.tilab.wolf.preferences.PageSetupPreferencePage"
+            id="com.tilab.wolf.preferences.PageSetupPreferencePage"
+            category="com.tilab.wolf.preferences.EditorPreferencePage"
+            name="Page Setup">
+      </page>
+   </extension>
+   
+   <extension point="org.eclipse.core.runtime.preferences">
+      <initializer class="com.tilab.wolf.preferences.PreferenceInitializer">
+      </initializer>
+   </extension>
+   
+</plugin>

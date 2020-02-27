@@ -1,0 +1,196 @@
+2020-02-14 14:46:26.954 Main-Container>> INFO: >>>>>>>>>>>>>>>> current-directory   = C:\eclipse-jee-kepler-SR1-win32-x86_64\WADE-3.6.0\wadeSuite\wade [com.tilab.wade.Boot main()]
+2020-02-14 14:46:26.956 Main-Container>> INFO: >>>>>>>>>>>>>>>> wade-home           = C:\eclipse-jee-kepler-SR1-win32-x86_64\WADE-3.6.0\wadeSuite\wade [com.tilab.wade.Boot main()]
+2020-02-14 14:46:26.957 Main-Container>> INFO: >>>>>>>>>>>>>>>> project-home        = C:\eclipse-jee-kepler-SR1-win32-x86_64\WADE-3.6.0\wadeSuite\wade [com.tilab.wade.Boot main()]
+2020-02-14 14:46:27.138 Main-Container>> INFO: Loading types from file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/WADE-3.6.0/wadeSuite/wade/cfg/types.xml [com.tilab.wade.commons.TypeManager loadPlatformTypes()]
+2020-02-14 14:46:27.752 Main-Container>> INFO: ----------------------------------
+    This is JADE 4.5.0 - revision 6825 of 23-05-2017 10:06:04
+    downloaded in Open Source, under LGPL restrictions,
+    at http://jade.tilab.com/
+---------------------------------------- [jade.core.Runtime beginContainer()]
+2020-02-14 14:46:28.593 Main-Container>> INFO: Listening for intra-platform commands on address:
+- jicp://192.168.1.7:1099
+ [jade.imtp.leap.LEAPIMTPManager initialize()]
+2020-02-14 14:46:29.512 Main-Container>> INFO: Service jade.core.management.AgentManagement initialized [jade.core.BaseService init()]
+2020-02-14 14:46:29.570 Main-Container>> INFO: Service jade.core.messaging.Messaging initialized [jade.core.BaseService init()]
+2020-02-14 14:46:29.588 Main-Container>> INFO: Service jade.core.resource.ResourceManagement initialized [jade.core.BaseService init()]
+2020-02-14 14:46:29.595 Main-Container>> INFO: Service jade.core.messaging.TopicManagement initialized [jade.core.BaseService init()]
+2020-02-14 14:46:29.610 Main-Container>> INFO: Service jade.core.mobility.AgentMobility initialized [jade.core.BaseService init()]
+2020-02-14 14:46:29.619 Main-Container>> INFO: Service jade.core.event.Notification initialized [jade.core.BaseService init()]
+2020-02-14 14:46:29.625 Main-Container>> INFO: Service jade.core.replication.MainReplication initialized [jade.core.BaseService init()]
+2020-02-14 14:46:29.744 Main-Container>> INFO: Agent raa@WADE - Starting........... [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-14 14:46:29.752 Main-Container>> INFO: Container-Monitor agent activated [jade.core.AgentContainerImpl startBootstrapAgents()]
+2020-02-14 14:46:29.764 Main-Container>> INFO: --------------------------------------
+Agent container Main-Container@192.168.1.7 is ready.
+-------------------------------------------- [jade.core.AgentContainerImpl joinPlatform()]
+2020-02-14 14:46:29.763 Main-Container>> INFO: Agent cfa@WADE - Starting........... [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-14 14:46:29.821 Main-Container>> INFO: Agent raa@WADE - Reading agent allocation rules from file /raa/raa.xml [com.tilab.wade.raa.RuntimeAllocatorAgent readConfiguration()]
+2020-02-14 14:46:29.825 Main-Container>> INFO: Agent cfa@WADE: ConfigurationLoader class is com.tilab.wade.cfa.beans.ConfigurationLoaderImpl [com.tilab.wade.cfa.ConfigurationAgent agentSpecificSetup()]
+2020-02-14 14:46:29.908 Main-Container>> INFO: Agent raa@WADE - Initialized 1 allocation rules [com.tilab.wade.raa.RuntimeAllocatorAgent readConfiguration()]
+2020-02-14 14:46:29.930 Main-Container>> INFO: Agent cfa@WADE: Control-Agent class is com.tilab.wade.ca.ControllerAgent [com.tilab.wade.cfa.ConfigurationAgent agentSpecificSetup()]
+2020-02-14 14:46:29.931 Main-Container>> INFO: Agent cfa@WADE: Backup-Main-Control-Agent class is com.tilab.wade.bca.BackupControllerAgent [com.tilab.wade.cfa.ConfigurationAgent agentSpecificSetup()]
+2020-02-14 14:46:34.524 Main-Container>> INFO: Agent cfa@WADE - STARTUP COMPLETED SUCCESSFULLY! [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-14 14:46:34.539 Main-Container>> INFO: Agent raa@WADE - STARTUP COMPLETED SUCCESSFULLY! [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-14 14:47:40.853 Main-Container>> WARNING: Agent gui-Launcher0 - Controller gui-Launcher0-0-1581709660844 FAILURE received. [com.tilab.wade.dispatcher.DispatchingCapabilities$ExecutionControllerBehaviour handleFailure()]
+2020-02-14 14:47:47.979 Main-Container>> INFO: Agent cfa@WADE: Serving action startup-platform [com.tilab.wade.cfa.ConfigurationAgent serveStartupPlatform()]
+2020-02-14 14:47:53.619 Main-Container>> WARNING:  [com.tilab.wade.cfa.ConfigurationAgent checkHostAvailability()]
+test.common.TestException: Error looking up remote manager rmi://localhost:7777//TSDaemon - Caused by:  Connection refused to host: localhost; nested exception is: 
+	java.net.ConnectException: Connection refused: connect
+	at test.common.TestUtility.createRemoteManager(Unknown Source)
+	at com.tilab.wade.cfa.ConfigurationAgent.checkHostAvailability(ConfigurationAgent.java:1655)
+	at com.tilab.wade.cfa.PlatformStarter$HostManager$HostAvailabilityChecker.action(PlatformStarter.java:242)
+	at jade.core.behaviours.Behaviour.actionWrapper(Behaviour.java:344)
+	at jade.core.behaviours.CompositeBehaviour.action(CompositeBehaviour.java:109)
+	at jade.core.behaviours.Behaviour.actionWrapper(Behaviour.java:344)
+	at jade.core.behaviours.CompositeBehaviour.action(CompositeBehaviour.java:109)
+	at jade.core.behaviours.Behaviour.actionWrapper(Behaviour.java:344)
+	at jade.core.behaviours.CompositeBehaviour.action(CompositeBehaviour.java:109)
+	at jade.core.behaviours.Behaviour.actionWrapper(Behaviour.java:344)
+	at jade.core.Agent$ActiveLifeCycle.execute(Agent.java:1585)
+	at jade.core.Agent.run(Agent.java:1524)
+	at java.lang.Thread.run(Thread.java:748)
+Nested Exception:
+java.rmi.ConnectException: Connection refused to host: localhost; nested exception is: 
+	java.net.ConnectException: Connection refused: connect
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:619)
+	at sun.rmi.transport.tcp.TCPChannel.createConnection(TCPChannel.java:216)
+	at sun.rmi.transport.tcp.TCPChannel.newConnection(TCPChannel.java:202)
+	at sun.rmi.server.UnicastRef.newCall(UnicastRef.java:338)
+	at sun.rmi.registry.RegistryImpl_Stub.lookup(RegistryImpl_Stub.java:112)
+	at java.rmi.Naming.lookup(Naming.java:101)
+	at test.common.TestUtility.createRemoteManager(Unknown Source)
+	at com.tilab.wade.cfa.ConfigurationAgent.checkHostAvailability(ConfigurationAgent.java:1655)
+	at com.tilab.wade.cfa.PlatformStarter$HostManager$HostAvailabilityChecker.action(PlatformStarter.java:242)
+	at jade.core.behaviours.Behaviour.actionWrapper(Behaviour.java:344)
+	at jade.core.behaviours.CompositeBehaviour.action(CompositeBehaviour.java:109)
+	at jade.core.behaviours.Behaviour.actionWrapper(Behaviour.java:344)
+	at jade.core.behaviours.CompositeBehaviour.action(CompositeBehaviour.java:109)
+	at jade.core.behaviours.Behaviour.actionWrapper(Behaviour.java:344)
+	at jade.core.behaviours.CompositeBehaviour.action(CompositeBehaviour.java:109)
+	at jade.core.behaviours.Behaviour.actionWrapper(Behaviour.java:344)
+	at jade.core.Agent$ActiveLifeCycle.execute(Agent.java:1585)
+	at jade.core.Agent.run(Agent.java:1524)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:211)
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createSocket(RMIDirectSocketFactory.java:40)
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createSocket(RMIMasterSocketFactory.java:148)
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:613)
+	... 18 more
+2020-02-14 14:47:53.640 Main-Container>> WARNING: Platform startup completed with warnings:
+PLATFORM Sample
+- hosts:
+  HOST localhost
+  - error-code: MSGCODE_BOOTDAEMON_NOT_AVAILABLE
+  - reachability: true
+  - availability: false
+
+- backup mains: 0 [com.tilab.wade.cfa.PlatformStarter onEnd()]
+2020-02-14 14:49:38.366 Main-Container>> WARNING: Agent gui-Launcher2 - Controller gui-Launcher2-0-1581709778297 FAILURE received. [com.tilab.wade.dispatcher.DispatchingCapabilities$ExecutionControllerBehaviour handleFailure()]
+2020-02-14 14:59:27.872 Main-Container>> INFO: Agent cfa@WADE: Serving action save-configuration [com.tilab.wade.cfa.ConfigurationAgent serveSaveConfiguration()]
+2020-02-16 16:56:32.424 Main-Container>> INFO: >>>>>>>>>>>>>>>> current-directory   = C:\eclipse-jee-kepler-SR1-win32-x86_64\WADE-3.6.0\wadeSuite\wade [com.tilab.wade.Boot main()]
+2020-02-16 16:56:32.454 Main-Container>> INFO: >>>>>>>>>>>>>>>> wade-home           = C:\eclipse-jee-kepler-SR1-win32-x86_64\WADE-3.6.0\wadeSuite\wade [com.tilab.wade.Boot main()]
+2020-02-16 16:56:32.455 Main-Container>> INFO: >>>>>>>>>>>>>>>> project-home        = C:\eclipse-jee-kepler-SR1-win32-x86_64\WADE-3.6.0\wadeSuite\wade [com.tilab.wade.Boot main()]
+2020-02-16 16:56:32.728 Main-Container>> INFO: Loading types from file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/WADE-3.6.0/wadeSuite/wade/cfg/types.xml [com.tilab.wade.commons.TypeManager loadPlatformTypes()]
+2020-02-16 16:56:33.493 Main-Container>> INFO: ----------------------------------
+    This is JADE 4.5.0 - revision 6825 of 23-05-2017 10:06:04
+    downloaded in Open Source, under LGPL restrictions,
+    at http://jade.tilab.com/
+---------------------------------------- [jade.core.Runtime beginContainer()]
+2020-02-16 16:56:34.390 Main-Container>> INFO: Listening for intra-platform commands on address:
+- jicp://192.168.1.7:1099
+ [jade.imtp.leap.LEAPIMTPManager initialize()]
+2020-02-16 16:56:35.136 Main-Container>> INFO: Service jade.core.management.AgentManagement initialized [jade.core.BaseService init()]
+2020-02-16 16:56:35.183 Main-Container>> INFO: Service jade.core.messaging.Messaging initialized [jade.core.BaseService init()]
+2020-02-16 16:56:35.200 Main-Container>> INFO: Service jade.core.resource.ResourceManagement initialized [jade.core.BaseService init()]
+2020-02-16 16:56:35.208 Main-Container>> INFO: Service jade.core.messaging.TopicManagement initialized [jade.core.BaseService init()]
+2020-02-16 16:56:35.228 Main-Container>> INFO: Service jade.core.mobility.AgentMobility initialized [jade.core.BaseService init()]
+2020-02-16 16:56:35.236 Main-Container>> INFO: Service jade.core.event.Notification initialized [jade.core.BaseService init()]
+2020-02-16 16:56:35.242 Main-Container>> INFO: Service jade.core.replication.MainReplication initialized [jade.core.BaseService init()]
+2020-02-16 16:56:35.346 Main-Container>> INFO: Agent cfa@WADE - Starting........... [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 16:56:35.351 Main-Container>> INFO: Agent raa@WADE - Starting........... [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 16:56:35.369 Main-Container>> INFO: Container-Monitor agent activated [jade.core.AgentContainerImpl startBootstrapAgents()]
+2020-02-16 16:56:35.370 Main-Container>> INFO: --------------------------------------
+Agent container Main-Container@192.168.1.7 is ready.
+-------------------------------------------- [jade.core.AgentContainerImpl joinPlatform()]
+2020-02-16 16:56:35.425 Main-Container>> INFO: Agent raa@WADE - Reading agent allocation rules from file /raa/raa.xml [com.tilab.wade.raa.RuntimeAllocatorAgent readConfiguration()]
+2020-02-16 16:56:35.429 Main-Container>> INFO: Agent cfa@WADE: ConfigurationLoader class is com.tilab.wade.cfa.beans.ConfigurationLoaderImpl [com.tilab.wade.cfa.ConfigurationAgent agentSpecificSetup()]
+2020-02-16 16:56:35.536 Main-Container>> INFO: Agent cfa@WADE: Control-Agent class is com.tilab.wade.ca.ControllerAgent [com.tilab.wade.cfa.ConfigurationAgent agentSpecificSetup()]
+2020-02-16 16:56:35.628 Main-Container>> INFO: Agent cfa@WADE: Backup-Main-Control-Agent class is com.tilab.wade.bca.BackupControllerAgent [com.tilab.wade.cfa.ConfigurationAgent agentSpecificSetup()]
+2020-02-16 16:56:35.675 Main-Container>> INFO: Agent raa@WADE - Initialized 1 allocation rules [com.tilab.wade.raa.RuntimeAllocatorAgent readConfiguration()]
+2020-02-16 16:56:35.678 Main-Container>> INFO: Agent cfa@WADE - STARTUP COMPLETED SUCCESSFULLY! [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 16:56:35.703 Main-Container>> INFO: Agent raa@WADE - STARTUP COMPLETED SUCCESSFULLY! [com.tilab.wade.commons.WadeAgentImpl setup()]
+2020-02-16 16:57:01.722 Main-Container>> INFO: Agent cfa@WADE: Serving action startup-platform [com.tilab.wade.cfa.ConfigurationAgent serveStartupPlatform()]
+2020-02-16 16:57:03.415 Main-Container>> WARNING:  [com.tilab.wade.cfa.ConfigurationAgent checkHostAvailability()]
+test.common.TestException: Error looking up remote manager rmi://localhost:7777//TSDaemon - Caused by:  Connection refused to host: localhost; nested exception is: 
+	java.net.ConnectException: Connection refused: connect
+	at test.common.TestUtility.createRemoteManager(Unknown Source)
+	at com.tilab.wade.cfa.ConfigurationAgent.checkHostAvailability(ConfigurationAgent.java:1655)
+	at com.tilab.wade.cfa.PlatformStarter$HostManager$HostAvailabilityChecker.action(PlatformStarter.java:242)
+	at jade.core.behaviours.Behaviour.actionWrapper(Behaviour.java:344)
+	at jade.core.behaviours.CompositeBehaviour.action(CompositeBehaviour.java:109)
+	at jade.core.behaviours.Behaviour.actionWrapper(Behaviour.java:344)
+	at jade.core.behaviours.CompositeBehaviour.action(CompositeBehaviour.java:109)
+	at jade.core.behaviours.Behaviour.actionWrapper(Behaviour.java:344)
+	at jade.core.behaviours.CompositeBehaviour.action(CompositeBehaviour.java:109)
+	at jade.core.behaviours.Behaviour.actionWrapper(Behaviour.java:344)
+	at jade.core.Agent$ActiveLifeCycle.execute(Agent.java:1585)
+	at jade.core.Agent.run(Agent.java:1524)
+	at java.lang.Thread.run(Thread.java:748)
+Nested Exception:
+java.rmi.ConnectException: Connection refused to host: localhost; nested exception is: 
+	java.net.ConnectException: Connection refused: connect
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:619)
+	at sun.rmi.transport.tcp.TCPChannel.createConnection(TCPChannel.java:216)
+	at sun.rmi.transport.tcp.TCPChannel.newConnection(TCPChannel.java:202)
+	at sun.rmi.server.UnicastRef.newCall(UnicastRef.java:338)
+	at sun.rmi.registry.RegistryImpl_Stub.lookup(RegistryImpl_Stub.java:112)
+	at java.rmi.Naming.lookup(Naming.java:101)
+	at test.common.TestUtility.createRemoteManager(Unknown Source)
+	at com.tilab.wade.cfa.ConfigurationAgent.checkHostAvailability(ConfigurationAgent.java:1655)
+	at com.tilab.wade.cfa.PlatformStarter$HostManager$HostAvailabilityChecker.action(PlatformStarter.java:242)
+	at jade.core.behaviours.Behaviour.actionWrapper(Behaviour.java:344)
+	at jade.core.behaviours.CompositeBehaviour.action(CompositeBehaviour.java:109)
+	at jade.core.behaviours.Behaviour.actionWrapper(Behaviour.java:344)
+	at jade.core.behaviours.CompositeBehaviour.action(CompositeBehaviour.java:109)
+	at jade.core.behaviours.Behaviour.actionWrapper(Behaviour.java:344)
+	at jade.core.behaviours.CompositeBehaviour.action(CompositeBehaviour.java:109)
+	at jade.core.behaviours.Behaviour.actionWrapper(Behaviour.java:344)
+	at jade.core.Agent$ActiveLifeCycle.execute(Agent.java:1585)
+	at jade.core.Agent.run(Agent.java:1524)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:211)
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createSocket(RMIDirectSocketFactory.java:40)
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createSocket(RMIMasterSocketFactory.java:148)
+	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:613)
+	... 18 more
+2020-02-16 16:57:03.527 Main-Container>> WARNING: Platform startup completed with warnings:
+PLATFORM Sample
+- hosts:
+  HOST localhost
+  - error-code: MSGCODE_BOOTDAEMON_NOT_AVAILABLE
+  - reachability: true
+  - availability: false
+
+- backup mains: 0 [com.tilab.wade.cfa.PlatformStarter onEnd()]
+2020-02-16 16:57:48.856 Main-Container>> INFO: Agent cfa@WADE: Serving action shutdown-platform [com.tilab.wade.cfa.ConfigurationAgent serveShutdownPlatform()]

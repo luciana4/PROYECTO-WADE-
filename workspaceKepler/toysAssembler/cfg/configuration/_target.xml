@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<platform description="ToysAssempler configuration file" name="Toys">
+    <hosts>
+        <host name="localhost">
+            <containers>
+                <container name="Assembler">
+                    <agents>
+                        <agent name="assembler" type="Assembler Agent"/>                               
+                    </agents>
+                </container>
+				
+                <container name="Searchers">
+                    <agents>
+                        <agent name="searcher1" type="Searcher Agent"/>        
+                        <agent name="searcher2" type="Searcher Agent"/>    						
+                    </agents>
+                </container>
+				
+            </containers>
+        </host>            
+    </hosts>
+</platform>

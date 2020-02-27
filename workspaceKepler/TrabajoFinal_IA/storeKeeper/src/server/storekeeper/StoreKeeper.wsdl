@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://storekeeper/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="storekeeper" targetNamespace="http://storekeeper/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://storekeeper/">
+        <xsd:complexType name="Point">
+	      	<xsd:sequence>
+	      		<xsd:element name="x" type="xsd:int"></xsd:element>
+	      		<xsd:element name="y" type="xsd:int"></xsd:element>
+	      	</xsd:sequence>
+      	</xsd:complexType>
+      
+        <xsd:element name="getComponentsResponse">
+	        <xsd:complexType>
+	          <xsd:sequence>
+	          	<xsd:element name="availability" type="xsd:boolean" />
+	          	<xsd:element name="location" type="tns:Point"></xsd:element>
+	          </xsd:sequence>
+	        </xsd:complexType>
+      	</xsd:element>
+      
+		<xsd:element name="getComponents">
+		 <xsd:complexType>
+		 	<xsd:sequence>
+		 		<xsd:element name="quantity" type="xsd:int"></xsd:element>
+		 		<xsd:element name="type" type="xsd:string"></xsd:element>
+		 	</xsd:sequence>
+		 </xsd:complexType>
+		</xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+
+  <wsdl:message name="getComponentsRequest">
+    <wsdl:part element="tns:getComponents" name="inputParameters"/>  </wsdl:message>
+
+  <wsdl:message name="getComponentsResponse">
+    <wsdl:part element="tns:getComponentsResponse" name="parameters"/>  </wsdl:message>
+
+  <wsdl:portType name="StoreKeeperPort">
+    <wsdl:operation name="getComponents">
+      <wsdl:input message="tns:getComponentsRequest"/>
+      <wsdl:output message="tns:getComponentsResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+
+  <wsdl:binding name="StoreKeeperBinding" type="tns:StoreKeeperPort">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getComponents">
+      <soap:operation soapAction="urn:StoreKeeperAction"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+
+  <wsdl:service name="StoreKeeperService">
+    <wsdl:port binding="tns:StoreKeeperBinding" name="StoreKeeperPort">
+      <soap:address location="http://localhost:2000/axis/services/StoreKeeperPort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

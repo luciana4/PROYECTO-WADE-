@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>storeKeeper</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+		<nature>com.tilab.wolf.wadenature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>wolfCfg</name>
+			<type>2</type>
+			<location>C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/plugins/com.tilab.wolf_3.9.0/cfg</location>
+		</link>
+	</linkedResources>
+</projectDescription>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<mapAttribute key="org.eclipse.debug.core.environmentVariables">
+<mapEntry key="wolf_home" value="${wolf_home}"/>
+</mapAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.tilab.wade.Boot"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-conf main.properties"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="toysAssembler"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dtypes-file=types.xml -Dproject-home=&quot;C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/toysAssembler&quot;  -Djava.util.logging.config.file=&quot;cfg\log\log.properties&quot; -Dstartup-tag=&quot;wolf internal platform started - &quot;"/>
+</launchConfiguration>

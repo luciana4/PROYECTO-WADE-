@@ -1,0 +1,94 @@
+<!-- ANT BUILD FILE FOR THE PIZZA PRODUCER EXAMPLE-->
+	
+<project name="pizzaProducer" default="jar">
+	
+	<property environment="env"/>
+
+	<property name="src" location="src"/>
+	<property name="classes" location="classes"/>
+	<property name="lib" location="lib"/>
+	<property name="wade-lib" location="../../../lib"/>
+
+	<property name="debug-build" value="on"/>
+	
+	<path id="wade-classpath">
+		<fileset dir="${wade-lib}">
+			<include name="**/*.jar"/>
+		</fileset>
+	</path>
+	
+	<!--   _______________________________________________
+	                          INIT
+         _______________________________________________ -->
+	<target name="init">
+		<!-- Create the time stamp -->
+		<tstamp/>
+		<echo>JAVA_HOME = ${env.JAVA_HOME}</echo>
+		<mkdir dir = "${classes}"/>
+	</target>
+
+  
+	<!--  __________________________________________________
+	                          COMPILE
+	      __________________________________________________ -->
+	<target name="compile" depends="init" description="Compile pizzaProducer sources">
+		<javac srcdir="${src}" 
+		       destdir="${classes}"
+		       debug="${debug-build}"
+		       debuglevel="vars,lines,source"
+			   target="1.5"
+			   source="1.5"
+		       deprecation="true">
+			<classpath>
+				<path refid="wade-classpath"/>
+			</classpath>
+		</javac>
+	</target>
+
+	
+	<!--  __________________________________________________
+	                          JAR
+	      __________________________________________________ -->
+	<target name="jar" depends="compile" description="Create the pizzaProducer.jar file">
+		<jar destfile="${lib}/pizzaProducer.jar" >
+			<fileset dir="${classes}" />
+		</jar>
+	</target>
+
+	
+	<!--  __________________________________________________
+	                          REBUILD
+	      __________________________________________________ -->
+	<target name="rebuild" depends="clean, jar" description="Rebuild the pizza-service project from scratch"/>
+	
+
+	<!--  __________________________________________________
+	                          CLEAN
+	      __________________________________________________ -->
+	<target name="clean" description="Clean the pizzaProducer build environment">
+		<delete includeEmptyDirs="true" quiet="true">
+			<fileset dir="${classes}"/>
+		</delete>
+	</target>
+
+	
+	<!--  __________________________________________________
+	                          RUN
+	      __________________________________________________ -->
+	<target name="run" description="Start the pizzaProducer">
+		<java classname="pizza.PizzaProducer" fork="yes">
+			<classpath>
+				<fileset dir="${wade-lib}">
+					<include name="*.jar"/>
+				</fileset>
+				<fileset dir="${lib}">
+					<include name="pizzaProducer.jar"/>
+				</fileset>
+			</classpath>
+		</java>
+	</target>
+	
+</project>
+
+
+

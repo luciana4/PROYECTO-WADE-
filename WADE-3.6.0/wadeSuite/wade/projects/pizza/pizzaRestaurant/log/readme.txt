@@ -1,0 +1,1 @@
+The directory where log files for the Pizza Restaurant example will be produced

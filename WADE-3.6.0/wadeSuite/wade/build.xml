@@ -1,0 +1,791 @@
+<!-- WADE ANT BUILD FILE-->
+
+<project name="wade" default="jar">
+
+	<tstamp/>
+	<property environment="env"/>
+	<property file="build.properties"/>
+	<property file="cfg/boot.properties"/>
+
+	<property name="wade-home" value="${basedir}" />
+	<property name="src" location="src"/>
+	<property name="classes" location="classes"/>
+	<property name="lib" location="lib"/>
+	<property name="dist" location="dist"/>
+	<property name="cfg" location="cfg"/>
+	<property name="doc" location="doc"/>
+	<property name="tmp" location="tmp"/>
+	<property name="projects" location="projects"/>
+	<property name="resources" location="resources"/>
+	<property name="add-ons" location="add-ons"/>
+
+	<property name="wadeZip" location="${dist}/WADE-${version}.zip"/>
+	<property name="wadeDocZip" location="${dist}/WADE-doc-${version}.zip"/>
+	<property name="wadeExamplesZip" location="${dist}/WADE-examples-${version}.zip"/>
+
+	<property name="default-properties-file" value="${projects}/default.properties"/>
+	
+	<!-- Init CopyFilteredFiles ant task -->
+	<taskdef name="copyfilteredfiles" classname="com.tilab.ant.CopyFilteredFiles">
+		<classpath path ="resources/antTask/lib/wadeAntTask.jar"/>
+	</taskdef>  
+	
+	<path id="compile-boot-classpath">
+		<fileset dir="${lib}">
+			<include name="testSuite.jar"/>
+		</fileset>
+	</path>
+
+	<path id="compile-interface-classpath">
+		<fileset dir="${lib}">
+			<include name="jade.jar"/>
+		</fileset>
+	</path>
+	
+	<path id="compile-classpath">
+		<path refid="compile-interface-classpath"/>
+		<fileset dir="${lib}">
+			<include name="jadeMisc.jar"/>
+			<include name="testSuite.jar"/>
+			<include name="XMLCodec.jar"/>
+			<include name="wsdc.jar"/>
+			<include name="axis-plus.jar"/>
+			<include name="commons-codec-1.3.jar"/>
+			<include name="commons-lang-2.0.jar"/>
+			<include name="commons-logging-1.0.4.jar"/>
+			<include name="jaxrpc.jar"/>
+			<include name="saaj.jar"/>
+			<include name="wsdl4j-1.5.1.jar"/>
+			<include name="wss4j-1.5.1.jar"/>
+			<include name="bsh-2.0b4.jar"/>
+			<include name="addressing-1.1.1.jar"/>
+			<include name="jersey-client-1.12.jar"/>
+			<include name="jersey-core-1.12.jar"/>
+			<include name="groovy-2.3.6.jar"/>
+		</fileset>
+	</path>
+
+	<patternset id="src-boot-interface">
+		<include name="com/tilab/wade/boot/RemoteManagerEx.java"/>
+	</patternset>
+	
+	<patternset id="src-wade-interface">
+		<include name="com/tilab/wade/ca/ModuleDeployer.java"/>
+		<include name="com/tilab/wade/ca/ModuleUndeployer.java"/>
+		<include name="com/tilab/wade/ca/ModuleReverter.java"/>
+		<include name="com/tilab/wade/ca/ontology/*"/>
+		<include name="com/tilab/wade/cfa/beans/*"/>
+		<include name="com/tilab/wade/cfa/ontology/*"/>
+		<include name="com/tilab/wade/commons/AgentRole.java"/>
+		<include name="com/tilab/wade/commons/AgentType.java"/>
+		<include name="com/tilab/wade/commons/EventType.java"/>
+		<include name="com/tilab/wade/commons/WadeAgent.java"/>
+		<include name="com/tilab/wade/commons/TypeManagerIf.java"/>
+		<include name="com/tilab/wade/commons/TypeManagerProxy.java"/>
+		<include name="com/tilab/wade/commons/locale/*"/>
+		<include name="com/tilab/wade/commons/ontology/*"/>
+		<include name="com/tilab/wade/dispatcher/*"/>
+		<include name="com/tilab/wade/esa/ontology/*"/>
+		<include name="com/tilab/wade/event/*"/>
+		<include name="com/tilab/wade/performer/Constants.java"/>
+		<include name="com/tilab/wade/performer/DefaultParameterValues.java"/>
+		<include name="com/tilab/wade/performer/OntologyHolder.java"/>
+		<include name="com/tilab/wade/performer/WebServiceAddressingContext.java"/>
+		<include name="com/tilab/wade/performer/WebServiceSecurityContext.java"/>
+		<include name="com/tilab/wade/performer/WorkflowException.java"/>
+		<include name="com/tilab/wade/performer/descriptors/*"/>
+		<include name="com/tilab/wade/performer/descriptors/webservice/Header.java"/>
+		<include name="com/tilab/wade/performer/descriptors/rest/RestParameter.java"/>
+		<include name="com/tilab/wade/performer/descriptors/rest/RestOption.java"/>
+		<include name="com/tilab/wade/performer/event/*"/>
+		<include name="com/tilab/wade/performer/interactivity/*"/>
+		<include name="com/tilab/wade/performer/interactivity/ontology/*"/>
+		<include name="com/tilab/wade/performer/ontology/*"/>
+		<include name="com/tilab/wade/proxy/*"/>
+		<include name="com/tilab/wade/utils/*"/>
+		<include name="com/tilab/wade/utils/behaviours/*"/>
+		<include name="com/tilab/wade/wseg/ontology/*"/>
+		<include name="com/tilab/wade/wsma/ontology/*"/>
+		<include name="com/tilab/wade/wsma/MongoDialectConstants.java"/>
+		<include name="com/tilab/wade/wsma/HibernateDialectConstants.java"/>
+
+		<exclude name="com/tilab/wade/ca/ontology/CACoordinationOntology.java"/>
+		<exclude name="com/tilab/wade/ca/ontology/CACoordinationVocabulary.java"/>
+		<exclude name="com/tilab/wade/ca/ontology/CAStatus.java"/>
+		<exclude name="com/tilab/wade/ca/ontology/IsGlobalProperty.java"/>
+		<exclude name="com/tilab/wade/ca/ontology/RestartingAgent.java"/>
+		<exclude name="com/tilab/wade/ca/ontology/RestartingContainer.java"/>
+		<exclude name="com/tilab/wade/cfa/beans/ConfigurationLoader.java"/>
+		<exclude name="com/tilab/wade/cfa/beans/ConfigurationLoaderException.java"/>
+		<exclude name="com/tilab/wade/cfa/beans/ConfigurationLoaderImpl.java"/>
+		<exclude name="com/tilab/wade/cfa/beans/PlatformLoaderException.java"/>
+		<exclude name="com/tilab/wade/cfa/beans/PlatformLoaderXML.java"/>
+		<exclude name="com/tilab/wade/dispatcher/DispatchingCapabilities.java"/>
+		<exclude name="com/tilab/wade/dispatcher/WorkflowDispatcherAgent.java"/>
+		<exclude name="com/tilab/wade/event/EventEmitter.java"/>
+		<exclude name="com/tilab/wade/event/EventTypeManager.java"/>
+		<exclude name="com/tilab/wade/performer/interactivity/InteractionException.java"/>
+		<exclude name="com/tilab/wade/performer/interactivity/BackOnFirstInteractionException.java"/>
+		<exclude name="com/tilab/wade/performer/interactivity/InteractiveWorkflowBehaviour.java"/>
+		<exclude name="com/tilab/wade/performer/interactivity/OutputActivityBehaviour.java"/>
+		<exclude name="com/tilab/wade/performer/interactivity/OutputInteraction.java"/>
+		<exclude name="com/tilab/wade/proxy/EngineProxyShell.java"/>
+		<exclude name="com/tilab/wade/utils/CAUtils.java"/>
+		<exclude name="com/tilab/wade/utils/XMLManager.java"/>
+		<exclude name="com/tilab/wade/utils/AgentUtils.java"/>
+		<exclude name="com/tilab/wade/utils/auxiliary/*"/>
+	</patternset>
+	
+	
+	<!--   _______________________________________________
+	                          INIT
+         _______________________________________________ -->
+	<target name="init">
+		<echo>JAVA_HOME = ${env.JAVA_HOME}</echo>
+		<mkdir dir = "${classes}"/>
+		<mkdir dir = "${dist}"/>
+	</target>
+
+	
+	<!--  _______________________________________________
+	                            setWCInfo
+	      _______________________________________________ -->
+	<condition property="isPresentSUBWCRev">
+		<available file="resources/antTask/lib" type="dir"/>
+	</condition>
+		  
+	<target name="setWCInfo" depends="initSUBWCRev, setSVNInfo, setVersionInfo" />
+
+	<target name="initSUBWCRev" if="isPresentSUBWCRev">
+			<taskdef name="SUBWCRev" classname="com.tilab.ant.SUBWCRev">
+			<classpath>
+				<fileset dir="resources/antTask/lib">
+					<include name="antlr-runtime-3.4.jar"/>
+					<include name="sequence-library-1.0.3.jar"/>
+					<include name="sqljet-1.1.10.jar"/>
+					<include name="svnkit-1.8.8.jar"/>
+					<include name="SUBWCRev.jar"/>
+				</fileset>
+			</classpath>
+		</taskdef>  
+		<SUBWCRev workingcopypath="." />
+	</target>
+	
+	<target name="setSVNInfo">
+		<condition property="WCREV" else="UNKNOWN">
+			<isset property="WCREV"/>
+		</condition>
+		<echo>SVN revision number: ${WCREV}</echo>
+		<condition property="WCDATE" else="UNKNOWN">
+			<isset property="WCDATE"/>
+		</condition>
+		<echo>SVN revision date: ${WCDATE}</echo>
+	</target>
+
+	<target name="setVersionInfo">
+		<condition property="versionType" value="" else="(snapshot)" >
+			<equals arg1="${tagThisVersion}" arg2="true"/>
+		</condition>
+		<condition property="WCVER" value="${version} ${versionType}" else="UNKNOWN">
+			<isset property="version"/>
+		</condition>
+		<echo>WADE version: ${WCVER}</echo>
+	</target>
+
+	
+	<!--  __________________________________________________
+	                          COMPILE
+	      __________________________________________________ -->
+	<target name="compile-boot-interface" depends="init" description="Compile BOOT-INTERFACE sources">
+		<javac srcdir="${src}"
+			   destdir="${classes}"
+		       debug="${debug-build}"
+		       debuglevel="vars,lines,source"
+		       optimize="${optimised-build}"
+			   target="1.5"
+			   source="1.5"
+		       deprecation="true"
+			   sourcepath="">
+			<patternset refid="src-boot-interface"/>			   
+			<classpath>
+				<path refid="compile-boot-classpath"/>
+			</classpath>
+		</javac>
+	</target>
+
+	<target name="compile-wade-interface" depends="init" description="Compile WADE-INTERFACE sources">
+		<javac srcdir="${src}"
+			   destdir="${classes}"
+		       debug="${debug-build}"
+		       debuglevel="vars,lines,source"
+		       optimize="${optimised-build}"
+			   target="1.5"
+			   source="1.5"
+		       deprecation="true"
+			   sourcepath="">
+			<patternset refid="src-wade-interface"/>			   
+			<classpath>
+				<path refid="compile-interface-classpath"/>
+			</classpath>
+		</javac>
+	</target>
+
+	<target name="compile-wade" depends="init" description="Compile WADE sources">
+		<javac srcdir="${src}"
+			   destdir="${classes}"
+		       debug="${debug-build}"
+		       debuglevel="vars,lines,source"
+		       optimize="${optimised-build}"
+			   target="1.5"
+			   source="1.5"
+		       deprecation="true">
+			<classpath>
+				<path refid="compile-classpath"/>
+			</classpath>
+		</javac>
+	</target>
+
+	
+	<!--  __________________________________________________
+	                          JAR
+	      __________________________________________________ -->
+	<target name="jar" depends="clean, setWCInfo" description="Build bootInterface.jar, wadeInterface.jar and wade.jar">
+
+		<!-- Compile boot interface -->
+		<antcall target="compile-boot-interface"/>
+
+		<!-- Jar boot interface -->
+		<jar destfile="${lib}/bootInterface.jar" >
+			<manifest>
+				<attribute name="Built-By" value="Wade Team (${user.name})"/>
+				<attribute name="Build-Date" value="${DSTAMP}-${TSTAMP}"/>
+				<section name="Wade Informations">
+					<attribute name="Specification-Title" value="Wade Boot Interface"/>
+					<attribute name="Specification-Version" value="${WCVER}"/>
+					<attribute name="SVN-Revision" value="${WCREV}"/>
+					<attribute name="SVN-Date" value="${WCDATE}"/>
+				</section>
+			</manifest>
+			<fileset dir="${classes}">
+				<include name="**/*.class"/>
+			</fileset>
+		</jar>
+
+		<!-- Delete classes directory -->
+		<delete includeEmptyDirs="true" quiet="true">
+			<fileset dir="${classes}"/>
+		</delete>
+		
+		<!-- Compile wade interface -->
+		<antcall target="compile-wade-interface"/>
+	
+		<!-- Jar wade interface -->
+		<jar destfile="${lib}/wadeInterface.jar" >
+			<manifest>
+				<attribute name="Built-By" value="Wade Team (${user.name})"/>
+				<attribute name="Build-Date" value="${DSTAMP}-${TSTAMP}"/>
+				<section name="Wade Informations">
+					<attribute name="Specification-Title" value="Wade Interface"/>
+					<attribute name="Specification-Version" value="${WCVER}"/>
+					<attribute name="SVN-Revision" value="${WCREV}"/>
+					<attribute name="SVN-Date" value="${WCDATE}"/>
+				</section>
+			</manifest>
+			<fileset dir="${classes}">
+				<include name="**/*.class"/>
+			</fileset>
+		</jar>
+		
+		<!-- Compile wade -->
+		<antcall target="compile-wade"/>
+		
+		<!-- Copy only wade classes in tmp -->
+		<mkdir dir = "${tmp}"/>
+		<copyfilteredfiles sourcedir="${classes}" destdir="${tmp}" excludes="${lib}/wadeInterface.jar,${lib}/bootInterface.jar"/>
+
+		<!-- Copy images -->
+		<copy todir="${tmp}">
+			<fileset dir="${src}">
+				<include name="**/*.png"/>
+			</fileset>
+		</copy>
+
+		<!-- Jar wade -->
+		<jar destfile="${lib}/wade.jar" >
+			<manifest>
+				<attribute name="Built-By" value="Wade Team (${user.name})"/>
+				<attribute name="Build-Date" value="${DSTAMP}-${TSTAMP}"/>
+				<section name="Wade Informations">
+					<attribute name="Specification-Title" value="Wade Core"/>
+					<attribute name="Specification-Version" value="${WCVER}"/>
+					<attribute name="SVN-Revision" value="${WCREV}"/>
+					<attribute name="SVN-Date" value="${WCDATE}"/>
+				</section>
+			</manifest>
+			<fileset dir="${tmp}">
+				<include name="**/*.class"/>
+				<include name="**/*.png"/>
+			</fileset>
+		</jar>
+
+		<!-- Delete tmp folder -->
+		<delete includeEmptyDirs="true" quiet="true">
+			<fileset dir="${tmp}"/>
+		</delete>
+
+	</target>
+
+	
+	<!--  __________________________________________________
+	                          DOC
+        __________________________________________________ -->
+	<target name="doc" depends="compile-wade" description="Generate WADE javadoc">
+		<javadoc destdir="${doc}/api-wade"
+		         author="true"
+		         doctitle="&lt;h1>WADE ${version} API&lt;/h1>"
+		         bottom="Workflows and Agents Developement Environemnt"
+		         windowtitle="WADE API">
+			<packageset dir="${src}">
+			</packageset>
+			<classpath>
+				<pathelement location="{classes}"/>
+				<path refid="compile-classpath"/>
+			</classpath>
+		</javadoc>
+
+	</target>
+
+
+	<!--  __________________________________________________
+	                          DIST
+	      __________________________________________________ -->
+	<target name="dist" depends="jar, doc" description="Prepare the WADE distribution (assuming wade jar files and API documentation have already been created)">
+	
+		<echo message="GENERATE THE PDF OF THE WADE DOCUMENTATIONS, PUT THEM IN THE DOC DIRECTORY (wade/doc) AND THEN PRESS ENTER ->"/>
+		<input/>
+	
+
+		<delete file="${wadeZip}" quiet="true"/>
+		<fixcrlf srcdir="."
+			eol="lf"
+			eof="remove"
+			includes="**/*.sh,**/*.properties"
+		/>
+		<zip destfile="${wadeZip}">
+			<zipfileset dir="." prefix="wadeSuite/wade">
+				<include name="LICENSE.txt"/>
+				<include name="COPYING.txt"/>
+				<include name="README.txt"/>
+				<include name="build.xml"/>
+				<include name="add-ons/readme.txt"/>
+				<include name="cfg/**"/>
+				<exclude name="cfg/configuration/**"/>
+				<include name="projects/default.properties"/>
+				<include name="projects/readme.txt"/>
+				<include name="lib/**"/>
+				<exclude name="lib/wadeTests.jar"/>
+				<include name="log/readme.txt"/>
+			</zipfileset>
+			
+			<zipfileset dir="." prefix="wadeSuite/wade" filemode="755">
+				<include name="bin/**"/>
+			</zipfileset>
+
+			<zipfileset dir="src" prefix="wadeSuite/wade/src">
+				<exclude name="**/*.java@"/>
+				<exclude name="**/*.java#"/>
+
+				<exclude name="com/tilab/wade/VersionManager.java_template"/>
+			</zipfileset>
+
+			<zipfileset dir="resources" prefix="wadeSuite/wade/resources">
+				<exclude name="antTask/classes/**"/>
+			</zipfileset>
+			
+			<zipfileset dir="cfg/configuration" includes="sample.xml" fullpath="wadeSuite/wade/cfg/configuration/sample.xml"/>
+			<zipfileset dir="cfg/configuration" includes="sample.xml" fullpath="wadeSuite/wade/cfg/configuration/_target.xml"/>
+		</zip>
+
+		<delete file="${wadeDocZip}" quiet="true"/>
+		<zip destfile="${wadeDocZip}">
+			<zipfileset dir=".." prefix="wadeSuite">
+				<include name="wade/doc/api-wade/**"/>
+				<include name="wade/doc/readme.txt"/>
+				<include name="wade/doc/WADE-Tutorial.pdf"/>
+				<include name="wade/doc/WADE-User-Guide.pdf"/>
+				<include name="wade/doc/WADE-Installation-Guide.pdf"/>
+				<include name="wade/ChangeLog.txt"/>
+			</zipfileset>
+		</zip>
+		
+	</target>
+
+
+	<!--  __________________________________________________
+	                          ALL
+	      __________________________________________________ -->
+	<target name="all" depends="jar, doc, dist" description="Rebuild WADE from scratch (including the related javadoc) and create the distribution zip file"/>
+
+	
+	<!--  __________________________________________________
+	                          CLEAN
+	      __________________________________________________ -->
+	<target name="clean" description="Clean the WADE build environment">
+		<delete includeEmptyDirs="true" quiet="true">
+			<fileset dir="${classes}"/>
+			<fileset dir="${dist}"/>
+			<fileset dir="${tmp}"/>
+			<fileset dir="${doc}/api-wade"/>
+			<fileset dir="${lib}">
+				<include name="wade.jar"/>
+				<include name="wadeInterface.jar"/>
+				<include name="bootInterface.jar"/>
+			</fileset>
+		</delete>
+	</target>
+
+	
+	<!--  __________________________________________________
+	                         EXAMPLES DIST
+	      __________________________________________________ -->
+	<target name="examples-dist" description="Prepare the WEADE examples distribution">
+		<fixcrlf srcdir="./examples"
+			eol="lf"
+			eof="remove"
+			includes="**/*.sh,**/*.properties"
+		/>
+	
+		<!-- Build the BookTrading example -->
+		<ant antfile="build.xml" dir="./examples/booktrading" inheritAll="false" target="rebuild"/>
+
+		<!-- Build the WorkflowTracer example -->
+		<ant antfile="build.xml" dir="./examples/workflowtracer" inheritAll="false" target="rebuild"/>
+
+		<!-- Build the DancingAgents example -->
+		<ant antfile="build.xml" dir="./examples/dancingagents" inheritAll="false" target="rebuild"/>
+
+		<!-- Build the Pizza example -->
+		<ant antfile="build.xml" dir="./examples/pizza/pizzaRestaurant" inheritAll="false" target="rebuild"/>
+		<ant antfile="build.xml" dir="./examples/pizza/pizzaService" inheritAll="false" target="rebuild"/>
+
+		<!-- Build the Toys example -->
+		<ant antfile="build.xml" dir="./examples/toys/storeKeeper" inheritAll="false" target="rebuild"/>
+		<ant antfile="build.xml" dir="./examples/toys/toysAssembler" inheritAll="false" target="rebuild"/>
+
+		<!-- Build the phoneBook example -->
+		<ant antfile="build.xml" dir="./examples/phoneBook/phoneBookService" inheritAll="false" target="rebuild"/>
+		<ant antfile="build.xml" dir="./examples/phoneBook/phoneBookTest" inheritAll="false" target="rebuild"/>
+		
+		<!-- Create the examples distribution file -->
+		<delete file="${wadeExamplesZip}" quiet="true"/>
+		<zip destfile="${wadeExamplesZip}">
+			<!-- BookTrading -->
+			<zipfileset dir="./examples/booktrading" prefix="wadeSuite/wade/projects/" >
+				<include name="booktrading.properties"/>
+			</zipfileset>
+			<zipfileset dir="./examples/booktrading" prefix="wadeSuite/wade/examples/booktrading" >
+				<include name="build.xml"/>
+				<include name="README.txt"/>
+				<include name="cfg/**"/>
+				<exclude name="cfg/configuration/_target.xml"/>
+				<include name="lib/**"/>
+				<include name="src/**"/>
+				<include name="workflow/src/**"/>
+				<include name="deploy/**"/>
+				<include name="log/**"/>
+			</zipfileset>
+			<zipfileset dir="./examples/booktrading/cfg/configuration" includes="trading.xml" fullpath="wadeSuite/wade/examples/booktrading/cfg/configuration/_target.xml"/>
+
+			<!-- WorkflowTracer -->
+			<zipfileset dir="./examples/workflowtracer" prefix="wadeSuite/wade/projects/" >
+				<include name="workflowtracer.properties"/>
+			</zipfileset>
+			<zipfileset dir="./examples/workflowtracer" prefix="wadeSuite/wade/examples/workflowtracer" >
+				<include name="build.xml"/>
+				<include name="README.txt"/>
+				<include name="cfg/**"/>
+				<include name="lib/**"/>
+				<include name="src/**"/>
+				<include name="log/**"/>
+			</zipfileset>
+
+			<!-- DancingAgents -->
+			<zipfileset dir="./examples/dancingagents" prefix="wadeSuite/wade/projects/" >
+				<include name="dancingagents.properties"/>
+			</zipfileset>
+			<zipfileset dir="./examples/dancingagents" prefix="wadeSuite/wade/examples/dancingagents" >
+				<include name="build.xml"/>
+				<include name="README.txt"/>
+				<include name="cfg/**"/>
+				<exclude name="cfg/configuration/_target.xml"/>
+				<include name="lib/**"/>
+				<include name="src/**"/>
+				<include name="log/readme.txt"/>
+			</zipfileset>
+			<zipfileset dir="./examples/dancingagents/cfg/configuration" includes="dancingAgents.xml" fullpath="wadeSuite/wade/examples/dancingagents/cfg/configuration/_target.xml"/>
+			
+			<!-- Pizza -->
+			<zipfileset dir="./examples/pizza/pizzaRestaurant" prefix="wadeSuite/wade/projects/" >
+				<include name="pizzaRestaurant.properties"/>
+			</zipfileset>
+			<zipfileset dir="./examples/pizza" prefix="wadeSuite/wade/examples/pizza" >
+				<include name="README.txt"/>
+			</zipfileset>
+			<zipfileset dir="./examples/pizza/pizzaRestaurant" prefix="wadeSuite/wade/examples/pizza/pizzaRestaurant" >
+				<include name="build.xml"/>
+				<include name="README.txt"/>
+				<include name="startClient.bat"/>
+				<include name="cfg/**"/>
+				<exclude name="cfg/configuration/_target.xml"/>
+				<include name="lib/**"/>
+				<include name="src/**"/>
+				<include name="workflow/src/**"/>
+				<include name="deploy/**"/>
+				<include name="log/readme.txt"/>
+				<include name="wadeServices/**"/>
+			</zipfileset>
+			<zipfileset dir="./examples/pizza/pizzaRestaurant/cfg/configuration" includes="pizza.xml" fullpath="wadeSuite/wade/examples/pizza/pizzaRestaurant/cfg/configuration/_target.xml"/>
+			<zipfileset dir="./examples/pizza/pizzaRestaurant/wadeServices" includes="PizzaServices_S.jar" fullpath="wadeSuite/wade/examples/pizza/pizzaRestaurant/deploy/PizzaServices_S.jar"/>
+			<zipfileset dir="./examples/pizza/pizzaService" prefix="wadeSuite/wade/examples/pizza/pizzaService" >
+				<include name="build.xml"/>
+				<include name="startPizzaProducer.sh"/>
+				<include name="startPizzaProducer.bat"/>
+				<include name="lib/**"/>
+				<include name="src/**"/>
+				<include name="wsdl/**"/>
+			</zipfileset>
+			
+			<!-- Toys -->
+			<zipfileset dir="./examples/toys/toysAssembler" prefix="wadeSuite/wade/projects/" >
+				<include name="toysAssembler.properties"/>
+			</zipfileset>
+			<zipfileset dir="./examples/toys/toysAssembler" prefix="wadeSuite/wade/examples/toys/toysAssembler" >
+				<include name="build.xml"/>
+				<include name="README.txt"/>
+				<include name="cfg/**"/>
+				<exclude name="cfg/configuration/_target.xml"/>
+				<include name="lib/**"/>
+				<include name="src/**"/>
+				<include name="log/readme.txt"/>
+				<include name="wadeServices/**"/>
+				<include name="modules/**"/>
+				<include name="deploy/**"/>
+			</zipfileset>
+			<zipfileset dir="./examples/toys/toysAssembler/cfg/configuration" includes="ToysAssembler.xml" fullpath="wadeSuite/wade/examples/toys/toysAssembler/cfg/configuration/_target.xml"/>
+			<zipfileset dir="./examples/toys/storeKeeper" prefix="wadeSuite/wade/examples/toys/storeKeeper" >
+				<include name="build.xml"/>
+				<include name="startStoreKeeper.bat"/>
+				<include name="startStoreKeeper.sh"/>
+				<include name="lib/**"/>
+				<include name="src/**"/>
+			</zipfileset>
+			
+			<!-- phoneBook -->
+			<zipfileset dir="./examples/phoneBook/phoneBookTest" prefix="wadeSuite/wade/projects/" >
+				<include name="phoneBook.properties"/>
+			</zipfileset>
+			<zipfileset dir="./examples/phoneBook/phoneBookTest" prefix="wadeSuite/wade/examples/phoneBook/phoneBookTest" >
+				<include name="build.xml"/>				
+				<include name="cfg/**"/>
+				<exclude name="cfg/configuration/_target.xml"/>
+				<include name="src/**"/>
+				<include name="workflow/src/**"/>
+				<include name="log/readme.txt"/>
+				<include name="wadeServices/**"/>
+				<include name="deploy/**"/>
+				<include name="lib/**"/>
+				<include name="startUser.bat"/>
+				<include name="startUser.sh"/>
+			</zipfileset>
+			<zipfileset dir="./examples/phoneBook/phoneBookTest/cfg/configuration" includes="phoneBook.xml" fullpath="wadeSuite/wade/examples/phoneBook/phoneBookTest/cfg/configuration/_target.xml"/>
+			<zipfileset dir="./examples/phoneBook/phoneBookService" prefix="wadeSuite/wade/examples/phoneBook/phoneBookService" >
+				<include name="build.xml"/>				
+				<include name="WebContent/**"/>
+				<include name="src/**"/>
+				<include name="wadl/**"/>
+				<include name="webapp/**"/>
+			</zipfileset>
+			<zipfileset dir="./examples/phoneBook" includes="WadeRESTTutorial.docx" fullpath="wadeSuite/wade/examples/phoneBook/WadeRESTTutorial.docx"/>
+			<zipfileset dir="./examples/phoneBook" includes="README.txt" fullpath="wadeSuite/wade/examples/phoneBook/README.txt"/>
+		</zip>
+	</target>
+
+	
+	<!--  __________________________________________________
+	                          CLEAN EXAMPLES
+	      __________________________________________________ -->
+	<target name="clean-examples" description="Clean the WADE examples build environment">
+		<!-- Clean the BookTrading example -->
+		<ant antfile="build.xml" dir="./examples/booktrading" inheritAll="false" target="clean"/>
+
+		<!-- Clean the WorkflowTracer example -->
+		<ant antfile="build.xml" dir="./examples/workflowtracer" inheritAll="false" target="clean"/>
+
+		<!-- Clean the DancingAgents example -->
+		<ant antfile="build.xml" dir="./examples/dancingagents" inheritAll="false" target="clean"/>
+		
+		<!-- Clean the phoneBookTest example -->
+		<ant antfile="build.xml" dir="./examples/phoneBook/phoneBookTest" inheritAll="false" target="clean"/>
+		
+		<!-- Clean the phoneBookService example -->
+		<ant antfile="build.xml" dir="./examples/phoneBook/phoneBookService" inheritAll="false" target="clean"/>
+		
+	</target>
+	
+
+	<!--  __________________________________________________
+	                          RUN ENGINE PROXY SHELL
+	      __________________________________________________ -->
+	<target name="engine-proxy-shell" description="Start engine proxy shell">
+		<java classname="com.tilab.wade.proxy.EngineProxyShell" fork="yes">
+			<classpath>
+				<fileset dir="${lib}">
+					<include name="*.jar"/>
+				</fileset>
+			</classpath>
+		</java>
+	</target>
+	
+	<!--  __________________________________________________
+	                          INIT-RUN-PROJECT
+        __________________________________________________ -->
+
+	<target name="init-run-project" depends="load-default-project">
+		<echo>WADE-HOME = ${wade-home}</echo>
+
+		<echo>PROJECT-HOME = ${project-home}</echo>
+
+		<!-- PROJECT CONFIGURATION DIRECTORY (relative to project-home) -->
+		<!-- The following setting has no effect if project-cfg is already set -->
+		<property name="project-cfg" value="cfg"/>
+		<property name="actual-project-cfg" value="${project-home}/${project-cfg}"/>
+		<echo>PROJECT-CFG = ${actual-project-cfg}</echo>
+
+		<!-- PROJECT CLASSES DIRECTORY (relative to project-home) -->
+		<!-- The following setting has no effect if project-classes is already set -->
+		<property name="project-classes" value="classes"/>
+		<property name="actual-project-classes" value="${project-home}/${project-classes}"/>
+		<echo>PROJECT-CLASSES = ${actual-project-classes}</echo>
+
+		<!-- PROJECT LIBRARY DIRECTORY (relative to project-home) --> 
+		<!-- The following setting has no effect if project-lib is already set -->
+		<property name="project-lib" value="lib"/>
+		<!-- NOTE that ANT complains if this points to a path that does not exists.
+		     If this is the case make it point to the WADE lib directory -->
+		<condition property="actual-project-lib" value="${project-home}/${project-lib}" else="${lib}">
+			<available file="${project-home}/${project-lib}"/>
+		</condition>
+		<echo>PROJECT-LIB = ${actual-project-lib}</echo>
+
+
+		<!-- WADE HOME PROPERTY -->
+		<property name="wade-home-option" value="-Dwade-home=${wade-home}" />
+
+		<!-- BOOT DAEMON PORT PROPERTY OPTION -->
+		<condition property="bootdaemon-port-option" value="-Dtsdaemon.port=${bootdaemon-port}" else="">
+			<isset property="bootdaemon-port"/>
+		</condition>
+
+		<!-- BOOT DAEMON NAME PROPERTY OPTION -->
+		<condition property="bootdaemon-name-option" value="-Dtsdaemon.name=${bootdaemon-name}" else="">
+			<isset property="bootdaemon-name"/>
+		</condition>
+		
+		<!-- BOOT DAEMON REMOTE OBJECT PORT PROPERTY OPTION -->
+		<condition property="bootdaemon-remoteobjectport-option" value="-Dtsdaemon.remoteobjectport=${bootdaemon-remoteobjectport}" else="">
+			<isset property="bootdaemon-remoteobjectport"/>
+		</condition>
+
+		<!-- BOOT DAEMON RMI SERVER HOST PROPERTY OPTION -->
+		<condition property="bootdaemon-rmiserverhostname-option" value="-Djava.rmi.server.hostname=${bootdaemon-rmiserverhostname}" else="">
+			<isset property="bootdaemon-rmiserverhostname"/>
+		</condition>
+		
+		<!-- BOOT DAEMON PROPERTiES OPTION -->
+		<property name="bootdaemon-options" value="${wade-home-option} ${bootdaemon-port-option} ${bootdaemon-name-option} ${bootdaemon-remoteobjectport-option} ${bootdaemon-rmiserverhostname-option}"/>
+		<echo>BOOTDAEMON-OPTIONS = ${bootdaemon-options}</echo>
+
+		<condition property="project-name-option" value="-Dproject-name=${project-name}" else="">
+			<isset property="project-name" />
+		</condition>
+		<property name="main-options" value="${project-name-option}"/>
+	</target>
+
+
+	<!--  __________________________________________________
+	                          LOAD DEFAULT PROJECT
+        __________________________________________________ -->
+	<target name="load-default-project" unless="project-home">
+		<property file="${default-properties-file}"/>
+		<echo>Project is not specified, default project is used</echo>
+	</target>
+
+
+	<!--  __________________________________________________
+	                          MAIN
+        __________________________________________________ -->
+	<target name="main" depends="init-run-project" description="Start the JADE Main Container">
+		<!-- CONTAINERS LOG PROPERTY FILE OPTION: use that of the project if present; that of WADE otherwise -->
+		<condition property="containers-log-option" value="-Djava.util.logging.config.file=${project-cfg}/log/log.properties"
+		                                      else ="-Djava.util.logging.config.file=${cfg}/log/log.properties">
+			<available file="${actual-project-cfg}/log/log.properties"/>
+		</condition>
+
+		<property name="jvmargs" value="${bootdaemon-options} ${main-options} ${containers-log-option} "/>
+
+		<echo>Starting JADE Main Container in directory ${project-home}; jvmargs = ${jvmargs}</echo>
+		<java classname="com.tilab.wade.Boot" fork="yes" dir="${project-home}">
+			<jvmarg line="${jvmargs}" />
+			<arg line="-conf main.properties"/>
+			<classpath>
+				<pathelement location="${actual-project-cfg}"/>
+				<pathelement location="${actual-project-classes}"/>
+				<fileset dir="${actual-project-lib}">
+					<include name="*.jar"/>
+				</fileset>
+				<pathelement location="${cfg}"/>
+				<fileset dir="${lib}">
+					<include name="*.jar"/>
+				</fileset>
+				<dirset dir="${add-ons}">
+					<include name="**/cfg"/>
+				</dirset>
+				<fileset dir="${add-ons}">
+					<include name="**/lib/*.jar"/>
+				</fileset>
+			</classpath>
+		</java>
+	</target>
+
+
+	<!--  __________________________________________________
+	                          BOOT DAEMON
+        __________________________________________________ -->
+	<target name="bootdaemon" depends="init-run-project" description="Start the Boot Daemon">
+		<property name="boot-log-option" value="-Djava.util.logging.config.file=${project-cfg}/log/bootdaemon-log.properties"/>
+		<property name="jvmargs" value="${boot-log-option} ${bootdaemon-options}"/>
+
+		<echo>Starting BootDaemon in directory ${project-home}; jvmargs = ${jvmargs}</echo>
+		<java classname="com.tilab.wade.boot.BootDaemon" fork="yes" dir="${project-home}">
+			<jvmarg line="${jvmargs}" />
+			<classpath>
+				<pathelement location="${actual-project-cfg}"/>
+				<pathelement location="${actual-project-classes}"/>
+				<fileset dir="${actual-project-lib}">
+					<include name="*.jar"/>
+				</fileset>
+				<pathelement location="${cfg}"/>
+				<fileset dir="${lib}">
+					<include name="*.jar"/>
+				</fileset>
+				<dirset dir="${add-ons}">
+					<include name="**/cfg"/>
+				</dirset>
+				<fileset dir="${add-ons}">
+					<include name="**/lib/*.jar"/>
+				</fileset>
+			</classpath>
+		</java>
+	</target>
+	
+</project>

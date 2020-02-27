@@ -1,0 +1,1 @@
+The directory where log files for the ToysAssembler example will be produced

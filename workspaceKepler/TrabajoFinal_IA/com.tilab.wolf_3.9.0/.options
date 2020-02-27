@@ -1,0 +1,2 @@
+# Debugging options for the com.tilab.wolf plug-in.
+com.tilab.wolf/debug = true

@@ -1,0 +1,62 @@
+<!-- ANT BUILD FILE FOR WADE-ANT-TASK -->
+
+<project name="WadeAntTask" default="jar">
+
+	<property environment="env"/>
+	<property name="src" location="src"/>
+	<property name="classes" location="classes"/>
+	<property name="lib" location="lib"/>
+
+	<path id="compile-classpath">
+		<fileset dir="${lib}">
+			<include name="antlr-runtime-3.4.jar"/>
+			<include name="sequence-library-1.0.3.jar"/>
+			<include name="sqljet-1.1.10.jar"/>
+			<include name="svnkit-1.8.8.jar"/>
+		</fileset>
+	</path>
+	
+	<target name="init">
+		<tstamp/>
+		<echo>JAVA_HOME = ${env.JAVA_HOME}</echo>
+		<mkdir dir = "${classes}"/>
+	</target>
+
+	<target name="compile" depends="init" description="Compile wade ant tasks sources">
+		<javac srcdir="${src}"
+		       destdir="${classes}"
+		       debug="on"
+		       debuglevel="vars,lines,source"
+		       optimize="off"
+			   target="1.5"
+		       source="1.5"
+		       deprecation="true">
+			<classpath>
+				<path refid="compile-classpath"/>
+			</classpath>
+		</javac>
+	</target>
+
+	<target name="jar" depends="compile" description="Create ant tasks jar file">
+		<jar destfile="${lib}/wadeAntTask.jar" >
+			<fileset dir="${classes}">
+				<include name="**/*.class"/>
+				<exclude name="com/tilab/ant/SUBWCRev.class"/>
+				<exclude name="com/tilab/ant/SVNInfo.class"/>
+			</fileset>
+		</jar>
+		<jar destfile="${lib}/SUBWCRev.jar" >
+			<fileset dir="${classes}">
+				<include name="com/tilab/ant/SUBWCRev.class"/>
+				<include name="com/tilab/ant/SVNInfo.class"/>
+			</fileset>
+		</jar>
+	</target>
+
+	<target name="clean" description="Clean environment">
+		<delete includeEmptyDirs="true" quiet="true">
+			<fileset dir="${classes}"/>
+		</delete>
+	</target>
+
+</project>

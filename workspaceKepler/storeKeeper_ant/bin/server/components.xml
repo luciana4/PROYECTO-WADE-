@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components>
+	<component name="head" x="125" y="240" quantity="100" />
+	<component name="body" x="250" y="120" quantity="100" />
+	<component name="leg" x="250" y="240" quantity="100" />
+	<component name="arm" x="375" y="240" quantity="100" />
+	<component name="wheel" x="125" y="120" quantity="100" />
+	<component name="cockpit" x="375" y="120" quantity="100" />
+</components>

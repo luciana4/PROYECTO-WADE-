@@ -1,0 +1,7 @@
+package ejemplo3;
+
+import com.tilab.wade.performer.WorkflowBehaviour;
+
+public class WorkflowEjemplo3 extends WorkflowBehaviour {
+
+}

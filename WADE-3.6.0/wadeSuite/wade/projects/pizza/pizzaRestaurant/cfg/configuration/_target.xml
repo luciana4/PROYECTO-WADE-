@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<platform description="This is a sample configuration" name="Sample">
+    <hosts>
+        <host name="localhost">
+            <containers>
+                <container name="Node-1">
+                    <agents>
+                        <agent name="performer" type="Workflow Engine Agent"/>                
+                        <agent name="wsma" type="Workflow Status Manager Agent"/>
+                        <agent name="esa" type="Event System Agent"/>                
+                    </agents>
+                </container>
+            </containers>
+        </host>            
+    </hosts>
+</platform>

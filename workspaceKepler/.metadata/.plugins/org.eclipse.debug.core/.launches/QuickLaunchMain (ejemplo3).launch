@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<mapAttribute key="org.eclipse.debug.core.environmentVariables">
+<mapEntry key="wolf_home" value="${wolf_home}"/>
+</mapAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.tilab.wade.Boot"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-platform-startup-time 1582665705542 -local-port 8172 -agents ca:com.tilab.wade.ca.ControllerAgent;cfa:com.tilab.wade.cfa.ConfigurationAgent;perf:com.tilab.wade.performer.WorkflowEngineAgent;esa:com.tilab.wade.esa.EventSystemAgent;wsma:com.tilab.wade.wsma.WorkflowStatusManagerAgent(storageClassName=com.tilab.wade.wsma.MemoryStorage) -services jade.core.messaging.TopicManagementService;jade.core.event.NotificationService"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="ejemplo3"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dtypes-file=types.xml -Dproject-home=&quot;C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/ejemplo3&quot;  -Djava.util.logging.config.file=&quot;${wolf_home}\cfg\log\log.properties&quot; -Dstartup-tag=&quot;wolf internal platform started - &quot;"/>
+</launchConfiguration>

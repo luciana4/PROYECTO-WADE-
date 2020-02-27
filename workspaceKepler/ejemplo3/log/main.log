@@ -1,0 +1,11 @@
+2020-02-25 16:21:49.009 Main-Container>> INFO: >>>>>>>>>>>>>>>> current-directory   = C:\eclipse-jee-kepler-SR1-win32-x86_64\eclipse\workspaceKepler\ejemplo3 [com.tilab.wade.Boot main()]
+2020-02-25 16:21:49.012 Main-Container>> INFO: >>>>>>>>>>>>>>>> project-home        = C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/workspaceKepler/ejemplo3 [com.tilab.wade.Boot main()]
+2020-02-25 16:21:49.309 Main-Container>> INFO: Loading types from file:/C:/eclipse-jee-kepler-SR1-win32-x86_64/eclipse/plugins/com.tilab.wolf_3.9.0/cfg/types.xml [com.tilab.wade.commons.TypeManager loadPlatformTypes()]
+2020-02-25 16:21:49.972 Main-Container>> INFO: ----------------------------------
+    This is JADE 4.5.0 - revision 6825 of 23-05-2017 10:06:04
+    downloaded in Open Source, under LGPL restrictions,
+    at http://jade.tilab.com/
+---------------------------------------- [jade.core.Runtime beginContainer()]
+2020-02-25 16:21:51.034 Main-Container>> WARNING: Error adding ICP jade.imtp.leap.JICP.JICPPeer@4fcd19b3[Cannot bind server socket to localhost port 8172]. [jade.imtp.leap.CommandDispatcher addICP()]
+2020-02-25 16:21:51.060 Main-Container>> SEVERE: Communication failure while joining agent platform: No ICP active [jade.core.AgentContainerImpl joinPlatform()]
+2020-02-25 16:21:51.066 Main-Container>> INFO: JADE is closing down now. [jade.core.Runtime$1 run()]

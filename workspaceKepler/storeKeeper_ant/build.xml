@@ -1,0 +1,94 @@
+<!-- ANT BUILD FILE FOR THE STOREKEEPER SERVER -->
+	
+<project name="storekeeperServer" default="compile">
+	
+	<property environment="env"/>
+	<property name="src" location="src"/>
+	<property name="classes" location="classes"/>
+	<property name="lib" location="lib"/>
+	<property name="debug-build" value="on"/>
+	
+	<property name="storekeeperServerJar" location="${lib}/storekeeperServer.jar"/>
+	
+	<path id="compile-classpath">
+		<fileset dir="${lib}">
+			<include name="**/*.jar"/>
+		</fileset>
+	</path>
+	
+	<!--   _______________________________________________
+	                          INIT
+         _______________________________________________ -->
+	<target name="init">
+		<!-- Create the time stamp -->
+		<tstamp/>
+		<echo>JAVA_HOME = ${env.JAVA_HOME}</echo>
+		<mkdir dir = "${classes}"/>
+	</target>
+
+  
+	<!--  __________________________________________________
+	                          COMPILE
+	      __________________________________________________ -->
+	<target name="compile" depends="init" description="Compile storekeeperServer sources">
+		<javac srcdir="${src}" 
+		       destdir="${classes}"
+		       debug="${debug-build}"
+		       debuglevel="vars,lines,source"
+			   target="1.5"
+			   source="1.5"
+		       deprecation="true">
+			<classpath>
+				<path refid="compile-classpath"/>				
+			</classpath>
+		</javac>
+	</target>
+
+	
+	<!--  __________________________________________________
+	                          build
+	      __________________________________________________ -->
+	<target name="build" depends="compile" description="Create the storekeeperServer.jar file">
+		<jar destfile="${storekeeperServerJar}" >
+			<fileset dir="${classes}"/>
+			<fileset dir="${src}">
+				<include name="server/storekeeper/deploy.wsdd"/>
+				<include name="server/components.xml"/>
+			</fileset>
+		</jar>
+	</target>
+
+	
+	<!--  __________________________________________________
+	                          REBUILD
+	      __________________________________________________ -->
+	<target name="rebuild" depends="clean, init, build" description="Rebuild the storekeeperServer project from scratch"/>
+
+
+	<!--  __________________________________________________
+	                          CLEAN
+	      __________________________________________________ -->
+	<target name="clean" description="Clean the storekeeperServer environment">
+		<delete includeEmptyDirs="true" quiet="true">
+			<fileset dir="${classes}"/>
+			<fileset dir="${lib}">
+				<include name="storekeeperServer.jar"/>
+			</fileset>
+		</delete>
+	</target>
+
+
+	<!--  __________________________________________________
+	                          RUN
+	      __________________________________________________ -->
+	<target name="run" description="start storekeeperServer">
+		<java classname="server.Server" fork="yes">
+			<classpath>
+				<fileset dir="${lib}">
+					<include name="*.jar"/>
+				</fileset>
+			</classpath>
+		</java>
+	</target>
+
+</project>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="PizzaServices" targetNamespace="urn:pizza" xmlns:impl="urn:pizza" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="urn:pizza">
+      <xsd:annotation/>
+	  
+      <xsd:element name="pizzaReady">
+        <xsd:complexType>
+          <xsd:sequence>
+			  <xsd:element name="clientName" type="xsd:string"/>
+			  <xsd:element name="pizzaType" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="pizzaReadyResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+	  
+	</xsd:schema>
+  </wsdl:types>
+  
+  
+  <wsdl:message name="pizzaReadyRequest">
+    <wsdl:part name="parameters" element="impl:pizzaReady"/>
+  </wsdl:message>
+  <wsdl:message name="pizzaReadyResponse">
+    <wsdl:part name="parameters" element="impl:pizzaReadyResponse"/>
+  </wsdl:message>
+  
+  
+  <wsdl:portType name="PizzaPort">
+    <wsdl:operation name="pizzaReady">
+      <wsdl:input message="impl:pizzaReadyRequest"/>
+      <wsdl:output message="impl:pizzaReadyResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+
+  
+  <wsdl:binding name="PizzaBinding" type="impl:PizzaPort">
+    <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="pizzaReady">
+      <wsdlsoap:operation soapAction="urn:pizzaAction"/>
+      <wsdl:input>
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+
+  
+  <wsdl:service name="PizzaService">
+    <wsdl:port name="PizzaPort" binding="impl:PizzaBinding">
+      <wsdlsoap:address location="http://localhost:8080/wadeServices/services/PizzaPort"/>
+    </wsdl:port>
+  </wsdl:service>
+
+  
+</wsdl:definitions>

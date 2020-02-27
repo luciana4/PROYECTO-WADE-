@@ -1,0 +1,6 @@
+<platform name="Sample" description="This is a sample configuration" backupsNumber="0">
+	<hosts>
+		<host name="localhost" backupAllowed="false">
+		</host>
+	</hosts>
+</platform>
